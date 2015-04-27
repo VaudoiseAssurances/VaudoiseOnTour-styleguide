@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width">
+
+      <link rel="stylesheet" href="/build/css/styleguide.css">
+    <link rel="stylesheet" href="/build/css/main.css">
+
+    <!--[if lt IE 9]>
+      <script src="/build/js/polyfills.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+      <!-- fabricator icons -->
+      <svg style="display: none;">
+      	<symbol id="f-icon-code" viewBox="0 0 512 512">
+      		<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+      	</symbol>
+      	<symbol id="f-icon-notes" viewBox="0 0 512 512">
+      		<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+      	</symbol>
+      	<symbol id="f-icon-labels" viewBox="0 0 512 512">
+      		<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+      	</symbol>
+      	<symbol id="f-icon-menu" viewBox="0 0 512 512">
+      		<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+      	</symbol>
+      	<symbol id="f-icon-settings" viewBox="0 0 512 512">
+      		<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+      	</symbol>
+      </svg>
+      <!-- /fabricator icons -->
+      <!-- fabricator menu -->
+      <div class="f-menu">
+      
+        <div class="f-controls">
+        	<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+        		<svg>
+        			<use xlink:href="#f-icon-labels" />
+        		</svg>
+        	</div>
+        	<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+        		<svg>
+        			<use xlink:href="#f-icon-notes" />
+        		</svg>
+        	</div>
+        	<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+        		<svg>
+        			<use xlink:href="#f-icon-code" />
+        		</svg>
+        	</div>
+        </div>
+      
+        <ul>
+      
+          <li>
+            <a href="index.html" class="f-menu__heading">Overview</a>
+          </li>
+      
+          <li>
+            <a href="docs.html" class="f-menu__heading">Docs</a>
+            <ul>
+              <li>
+                <a href="docs.html#javascript">Javascript</a>
+              </li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="atoms.html" class="f-menu__heading">Atoms</a>
+            <ul>
+              <li>
+                <a href="atoms.html#alerts">Alerts</a>
+              </li>
+              <li>
+                <a href="atoms.html#badges">Badges</a>
+              </li>
+              <li>
+                <a href="atoms.html#blockquote">Blockquote</a>
+              </li>
+              <li>
+                <a href="atoms.html#button">Button</a>
+              </li>
+              <li>
+                <a href="atoms.html#button-variations">Button Variations</a>
+              </li>
+              <li>
+                <a href="atoms.html#description">Description</a>
+              </li>
+              <li>
+                <a href="atoms.html#heading">Heading</a>
+              </li>
+              <li>
+                <a href="atoms.html#heading-variations">Heading Variations</a>
+              </li>
+              <li>
+                <a href="atoms.html#icon">Icon</a>
+              </li>
+              <li>
+                <a href="atoms.html#image">Image</a>
+              </li>
+              <li>
+                <a href="atoms.html#image-variation">Image Variation</a>
+              </li>
+              <li>
+                <a href="atoms.html#inline-elements">Inline Elements</a>
+              </li>
+              <li>
+                <a href="atoms.html#input">Input</a>
+              </li>
+              <li>
+                <a href="atoms.html#labels">Labels</a>
+              </li>
+              <li>
+                <a href="atoms.html#link">Link</a>
+              </li>
+              <li>
+                <a href="atoms.html#link-button">Link Button</a>
+              </li>
+              <li>
+                <a href="atoms.html#list">List</a>
+              </li>
+              <li>
+                <a href="atoms.html#paragraph">Paragraph</a>
+              </li>
+              <li>
+                <a href="atoms.html#paragraph-variations">Paragraph Variations</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="molecules.html" class="f-menu__heading">Molecules</a>
+            <ul>
+              <li>
+                <a href="molecules.html#address">Address</a>
+              </li>
+              <li>
+                <a href="molecules.html#breadcrumb">Breadcrumb</a>
+              </li>
+              <li>
+                <a href="molecules.html#button-groups">Button Groups</a>
+              </li>
+              <li>
+                <a href="molecules.html#collapse">Collapse</a>
+              </li>
+              <li>
+                <a href="molecules.html#dropdown">Dropdown</a>
+              </li>
+              <li>
+                <a href="molecules.html#input-groups">Input Groups</a>
+              </li>
+              <li>
+                <a href="molecules.html#list-group">List Group</a>
+              </li>
+              <li>
+                <a href="molecules.html#media">Media</a>
+              </li>
+              <li>
+                <a href="molecules.html#modal">Modal</a>
+              </li>
+              <li>
+                <a href="molecules.html#nav">Nav</a>
+              </li>
+              <li>
+                <a href="molecules.html#pager">Pager</a>
+              </li>
+              <li>
+                <a href="molecules.html#paginations">Paginations</a>
+              </li>
+              <li>
+                <a href="molecules.html#panels">Panels</a>
+              </li>
+              <li>
+                <a href="molecules.html#popover">Popover</a>
+              </li>
+              <li>
+                <a href="molecules.html#progress">Progress</a>
+              </li>
+              <li>
+                <a href="molecules.html#tab">Tab</a>
+              </li>
+              <li>
+                <a href="molecules.html#thumbnails">Thumbnails</a>
+              </li>
+              <li>
+                <a href="molecules.html#tooltips">Tooltips</a>
+              </li>
+              <li>
+                <a href="molecules.html#well">Well</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="organisms.html" class="f-menu__heading">Organisms</a>
+            <ul>
+              <li>
+                <a href="organisms.html#carousel">Carousel</a>
+              </li>
+              <li>
+                <a href="organisms.html#form">Form</a>
+              </li>
+              <li>
+                <a href="organisms.html#jumbotron">Jumbotron</a>
+              </li>
+              <li>
+                <a href="organisms.html#navbar">Navbar</a>
+              </li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="templates.html" class="f-menu__heading">Templates</a>
+            <ul>
+              <li>
+                <a href="templates/demo.html">Demo</a>
+              </li>
+            </ul>
+          </li>
+      
+        </ul>
+      
+      
+      </div>
+      <!-- /fabricator menu -->
+      <div class="f-container">
+        <div class="f-control-bar">
+        	<div class="f-control f-menu-toggle">
+        		<svg>
+        			<use xlink:href="#f-icon-menu" />
+        		</svg>
+        	</div>
+        </div>
+
+    
+
+<h1 data-f-toggle="labels">Organisms</h1>
+
+
+<div class="f-item-group" id="carousel">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Carousel</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item">
+      <img src="https://unsplash.it/1200/500/?random" alt="alt text"> </div>
+    <div class="item">
+      <img src="https://unsplash.it/1200/500/?random" alt="alt text"> </div>
+    <div class="item active">
+      <img src="https://unsplash.it/1200/500/?random" alt="alt text"> </div>
+  </div>
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div id=&quot;carousel-example-generic&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;
+  &lt;ol class=&quot;carousel-indicators&quot;&gt;
+    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;0&quot; class=&quot;&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;1&quot; class=&quot;&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;2&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;img src=&quot;https://unsplash.it/1200/500/?random&quot; alt=&quot;alt text&quot;&gt; &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;img src=&quot;https://unsplash.it/1200/500/?random&quot; alt=&quot;alt text&quot;&gt; &lt;/div&gt;
+    &lt;div class=&quot;item active&quot;&gt;
+      &lt;img src=&quot;https://unsplash.it/1200/500/?random&quot; alt=&quot;alt text&quot;&gt; &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;a class=&quot;left carousel-control&quot; href=&quot;#carousel-example-generic&quot; data-slide=&quot;prev&quot;&gt;
+    &lt;span class=&quot;glyphicon glyphicon-chevron-left&quot;&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class=&quot;right carousel-control&quot; href=&quot;#carousel-example-generic&quot; data-slide=&quot;next&quot;&gt;
+    &lt;span class=&quot;glyphicon glyphicon-chevron-right&quot;&gt;&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="form">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Form</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<form class="form-horizontal">
+  <div class="form-group">
+    <label for="input-email" class="col-sm-2 control-label">E-mail</label>
+    <div class="col-sm-10">
+      <input id="input-email" type="E-mail" class="form-control" placeholder="E-mail"> </div>
+  </div>
+  <div class="form-group">
+    <label for="input-password" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input id="input-password" type="Password" class="form-control" placeholder="Password"> </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="custom"> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;form class=&quot;form-horizontal&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;input-email&quot; class=&quot;col-sm-2 control-label&quot;&gt;E-mail&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;input id=&quot;input-email&quot; type=&quot;E-mail&quot; class=&quot;form-control&quot; placeholder=&quot;E-mail&quot;&gt; &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;input-password&quot; class=&quot;col-sm-2 control-label&quot;&gt;Password&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;input id=&quot;input-password&quot; type=&quot;Password&quot; class=&quot;form-control&quot; placeholder=&quot;Password&quot;&gt; &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+      &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;label&gt;
+          &lt;input type=&quot;checkbox&quot; value=&quot;custom&quot;&gt; Remember me
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+      &lt;button class=&quot;btn btn-primary&quot;&gt;Sign in&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="jumbotron">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Jumbotron</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="jumbotron">
+  <h1>Hello World !</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. An potest, inquit ille, quicquam esse suavius quam nihil dolere? Philosophi autem in suis lectulis plerumque moriuntur. Potius inflammat, ut coercendi magis quam dedocendi esse videantur.
+  </p>
+  <p>
+    <a href="#" class="btn btn-primary">Contact us</a> </p>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;jumbotron&quot;&gt;
+  &lt;h1&gt;Hello World !&lt;/h1&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. An potest, inquit ille, quicquam esse suavius quam nihil dolere? Philosophi autem in suis lectulis plerumque moriuntur. Potius inflammat, ut coercendi magis quam dedocendi esse videantur.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Contact us&lt;/a&gt; &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="navbar">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Navbar</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" placeholder="search"> </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;nav class=&quot;navbar navbar-default&quot;&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+    &lt;div class=&quot;navbar-header&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-1&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Brand&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+    &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-1&quot;&gt;
+      &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;form class=&quot;navbar-form navbar-left&quot; role=&quot;search&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;input type=&quot;search&quot; class=&quot;form-control&quot; placeholder=&quot;search&quot;&gt; &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;!-- /.navbar-collapse --&gt;
+  &lt;/div&gt;
+  &lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+
+      </div>
+      <script src="/build/js/styleguide.min.js"></script>
+    <script src="/build/js/vendors.min.js"></script>
+  </body>
+</html>

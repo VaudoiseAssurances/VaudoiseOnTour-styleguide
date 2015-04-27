@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width">
+
+      <link rel="stylesheet" href="/build/css/styleguide.css">
+    <link rel="stylesheet" href="/build/css/main.css">
+
+    <!--[if lt IE 9]>
+      <script src="/build/js/polyfills.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+      <!-- fabricator icons -->
+      <svg style="display: none;">
+      	<symbol id="f-icon-code" viewBox="0 0 512 512">
+      		<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+      	</symbol>
+      	<symbol id="f-icon-notes" viewBox="0 0 512 512">
+      		<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+      	</symbol>
+      	<symbol id="f-icon-labels" viewBox="0 0 512 512">
+      		<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+      	</symbol>
+      	<symbol id="f-icon-menu" viewBox="0 0 512 512">
+      		<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+      	</symbol>
+      	<symbol id="f-icon-settings" viewBox="0 0 512 512">
+      		<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+      	</symbol>
+      </svg>
+      <!-- /fabricator icons -->
+      <!-- fabricator menu -->
+      <div class="f-menu">
+      
+        <div class="f-controls">
+        	<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+        		<svg>
+        			<use xlink:href="#f-icon-labels" />
+        		</svg>
+        	</div>
+        	<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+        		<svg>
+        			<use xlink:href="#f-icon-notes" />
+        		</svg>
+        	</div>
+        	<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+        		<svg>
+        			<use xlink:href="#f-icon-code" />
+        		</svg>
+        	</div>
+        </div>
+      
+        <ul>
+      
+          <li>
+            <a href="index.html" class="f-menu__heading">Overview</a>
+          </li>
+      
+          <li>
+            <a href="docs.html" class="f-menu__heading">Docs</a>
+            <ul>
+              <li>
+                <a href="docs.html#javascript">Javascript</a>
+              </li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="atoms.html" class="f-menu__heading">Atoms</a>
+            <ul>
+              <li>
+                <a href="atoms.html#alerts">Alerts</a>
+              </li>
+              <li>
+                <a href="atoms.html#badges">Badges</a>
+              </li>
+              <li>
+                <a href="atoms.html#blockquote">Blockquote</a>
+              </li>
+              <li>
+                <a href="atoms.html#button">Button</a>
+              </li>
+              <li>
+                <a href="atoms.html#button-variations">Button Variations</a>
+              </li>
+              <li>
+                <a href="atoms.html#description">Description</a>
+              </li>
+              <li>
+                <a href="atoms.html#heading">Heading</a>
+              </li>
+              <li>
+                <a href="atoms.html#heading-variations">Heading Variations</a>
+              </li>
+              <li>
+                <a href="atoms.html#icon">Icon</a>
+              </li>
+              <li>
+                <a href="atoms.html#image">Image</a>
+              </li>
+              <li>
+                <a href="atoms.html#image-variation">Image Variation</a>
+              </li>
+              <li>
+                <a href="atoms.html#inline-elements">Inline Elements</a>
+              </li>
+              <li>
+                <a href="atoms.html#input">Input</a>
+              </li>
+              <li>
+                <a href="atoms.html#labels">Labels</a>
+              </li>
+              <li>
+                <a href="atoms.html#link">Link</a>
+              </li>
+              <li>
+                <a href="atoms.html#link-button">Link Button</a>
+              </li>
+              <li>
+                <a href="atoms.html#list">List</a>
+              </li>
+              <li>
+                <a href="atoms.html#paragraph">Paragraph</a>
+              </li>
+              <li>
+                <a href="atoms.html#paragraph-variations">Paragraph Variations</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="molecules.html" class="f-menu__heading">Molecules</a>
+            <ul>
+              <li>
+                <a href="molecules.html#address">Address</a>
+              </li>
+              <li>
+                <a href="molecules.html#breadcrumb">Breadcrumb</a>
+              </li>
+              <li>
+                <a href="molecules.html#button-groups">Button Groups</a>
+              </li>
+              <li>
+                <a href="molecules.html#collapse">Collapse</a>
+              </li>
+              <li>
+                <a href="molecules.html#dropdown">Dropdown</a>
+              </li>
+              <li>
+                <a href="molecules.html#input-groups">Input Groups</a>
+              </li>
+              <li>
+                <a href="molecules.html#list-group">List Group</a>
+              </li>
+              <li>
+                <a href="molecules.html#media">Media</a>
+              </li>
+              <li>
+                <a href="molecules.html#modal">Modal</a>
+              </li>
+              <li>
+                <a href="molecules.html#nav">Nav</a>
+              </li>
+              <li>
+                <a href="molecules.html#pager">Pager</a>
+              </li>
+              <li>
+                <a href="molecules.html#paginations">Paginations</a>
+              </li>
+              <li>
+                <a href="molecules.html#panels">Panels</a>
+              </li>
+              <li>
+                <a href="molecules.html#popover">Popover</a>
+              </li>
+              <li>
+                <a href="molecules.html#progress">Progress</a>
+              </li>
+              <li>
+                <a href="molecules.html#tab">Tab</a>
+              </li>
+              <li>
+                <a href="molecules.html#thumbnails">Thumbnails</a>
+              </li>
+              <li>
+                <a href="molecules.html#tooltips">Tooltips</a>
+              </li>
+              <li>
+                <a href="molecules.html#well">Well</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="organisms.html" class="f-menu__heading">Organisms</a>
+            <ul>
+              <li>
+                <a href="organisms.html#carousel">Carousel</a>
+              </li>
+              <li>
+                <a href="organisms.html#form">Form</a>
+              </li>
+              <li>
+                <a href="organisms.html#jumbotron">Jumbotron</a>
+              </li>
+              <li>
+                <a href="organisms.html#navbar">Navbar</a>
+              </li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="templates.html" class="f-menu__heading">Templates</a>
+            <ul>
+              <li>
+                <a href="templates/demo.html">Demo</a>
+              </li>
+            </ul>
+          </li>
+      
+        </ul>
+      
+      
+      </div>
+      <!-- /fabricator menu -->
+      <div class="f-container">
+        <div class="f-control-bar">
+        	<div class="f-control f-menu-toggle">
+        		<svg>
+        			<use xlink:href="#f-icon-menu" />
+        		</svg>
+        	</div>
+        </div>
+
+    
+
+<h1 data-f-toggle="labels">Atoms</h1>
+
+
+<div class="f-item-group" id="alerts">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Alerts</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; alert }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>modifiers</strong> - String</li>
+<li><strong>content</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<div class="alert alert-success">
+  Well done! You successfully read this important alert message.
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;alert alert-success&quot;&gt;
+  Well done! You successfully read this important alert message.
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="badges">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Badges</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; badge }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>content</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<span class="badge">42</span>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;span class=&quot;badge&quot;&gt;42&lt;/span&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="blockquote">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Blockquote</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; blockquote }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>class</strong> - String</li>
+<li><strong>attributes</strong> - String</li>
+<li><strong>content</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<blockquote>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. An potest, inquit ille, quicquam esse suavius quam nihil dolere? Philosophi autem in suis lectulis plerumque moriuntur. Potius inflammat, ut coercendi magis quam dedocendi esse videantur.
+  </p>
+</blockquote>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;blockquote&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. An potest, inquit ille, quicquam esse suavius quam nihil dolere? Philosophi autem in suis lectulis plerumque moriuntur. Potius inflammat, ut coercendi magis quam dedocendi esse videantur.
+  &lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="button">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Button</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; button }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>modifiers</strong> - String</li>
+<li><strong>attributes</strong> - String</li>
+<li><strong>label</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<button class="btn">button</button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;button class=&quot;btn&quot;&gt;button&lt;/button&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="button-variations">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Button Variations</h2>
+	</div>
+		<div class="f-item-group" id="button-variations.buttons-active">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Buttons Active</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; button modifiers=&quot;btn-primary active&quot; label=&quot;Active button&quot;}}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<button class="btn btn-primary active">Active button</button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;button class=&quot;btn btn-primary active&quot;&gt;Active button&lt;/button&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="button-variations.buttons-block">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Buttons Block</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; button modifiers=&quot;btn-primary btn-block&quot; label=&quot;Block button&quot;}}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<button class="btn btn-primary btn-block">Block button</button>
+<button class="btn btn-default btn-block">Block button</button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;button class=&quot;btn btn-primary btn-block&quot;&gt;Block button&lt;/button&gt;
+&lt;button class=&quot;btn btn-default btn-block&quot;&gt;Block button&lt;/button&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="button-variations.buttons-colors">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Buttons Colors</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; button modifiers=&quot;btn-primary&quot; label=&quot;Primary&quot;}}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<button class="btn btn-default">Default</button>
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-success">Success</button>
+<button class="btn btn-info">Info</button>
+<button class="btn btn-warning">Warning</button>
+<button class="btn btn-danger">Danger</button>
+<button class="btn btn-link">Link</button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;button class=&quot;btn btn-default&quot;&gt;Default&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+&lt;button class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+&lt;button class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="button-variations.buttons-disabled">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Buttons Disabled</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; button modifiers=&quot;btn-primary&quot; attributes=&quot;disabled&quot; label=&quot;Active button&quot;}}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<button class="btn btn-primary" disabled>Disabled button</button>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;button class=&quot;btn btn-primary&quot; disabled&gt;Disabled button&lt;/button&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="button-variations.buttons-size">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Buttons Size</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; button modifiers=&quot;btn-primary btn-lg&quot; label=&quot;Large button&quot;}}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<p>
+  <button class="btn btn-primary btn-lg">Large button</button>
+</p>
+<p>
+  <button class="btn btn-primary">Default button</button>
+</p>
+<p>
+  <button class="btn btn-primary btn-sm">Small button</button>
+</p>
+<p>
+  <button class="btn btn-primary btn-xs">Extra small button</button>
+</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p&gt;
+  &lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Large button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class=&quot;btn btn-primary&quot;&gt;Default button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class=&quot;btn btn-primary btn-sm&quot;&gt;Small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class=&quot;btn btn-primary btn-xs&quot;&gt;Extra small button&lt;/button&gt;
+&lt;/p&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="description">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Description</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<dl>
+  <dt>Lorem</dt>
+  <dd>Ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+</dl>
+<dl>
+  <dt>Sit sane ista voluptas</dt>
+  <dd>Itaque primos congressus copulationesque.</dd>
+</dl>
+<dl>
+  <dt>Praeclare hoc quidem</dt>
+  <dd>Sit sane ista voluptas. Itaque primos congressus copulationesque et consuetudinum.</dd>
+  <dd>Praeclare hoc quidem. Quis enim potest ea, quae probabilia videantur ei.</dd>
+</dl>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;dl&gt;
+  &lt;dt&gt;Lorem&lt;/dt&gt;
+  &lt;dd&gt;Ipsum dolor sit amet, consectetur adipiscing elit.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Sit sane ista voluptas&lt;/dt&gt;
+  &lt;dd&gt;Itaque primos congressus copulationesque.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Praeclare hoc quidem&lt;/dt&gt;
+  &lt;dd&gt;Sit sane ista voluptas. Itaque primos congressus copulationesque et consuetudinum.&lt;/dd&gt;
+  &lt;dd&gt;Praeclare hoc quidem. Quis enim potest ea, quae probabilia videantur ei.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="heading">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Heading</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; heading }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>level</strong> - Integer</li>
+<li><strong>class</strong> - String</li>
+<li><strong>attributes</strong> - String</li>
+<li><strong>content</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<h1>Title</h1>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h1&gt;Title&lt;/h1&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="heading-variations">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Heading Variations</h2>
+	</div>
+		<div class="f-item-group" id="heading-variations.heading-size">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Heading Size</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; heading level=3 content=&quot;Heading 3&quot; }}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<h1>My level 1 title</h1>
+<h2>My level 2 title</h2>
+<h3>My level 3 title</h3>
+<h4>My level 4 title</h4>
+<h5>My level 5 title</h5>
+<h6>My level 6 title</h6>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;h1&gt;My level 1 title&lt;/h1&gt;
+&lt;h2&gt;My level 2 title&lt;/h2&gt;
+&lt;h3&gt;My level 3 title&lt;/h3&gt;
+&lt;h4&gt;My level 4 title&lt;/h4&gt;
+&lt;h5&gt;My level 5 title&lt;/h5&gt;
+&lt;h6&gt;My level 6 title&lt;/h6&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="icon">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Icon</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; icon }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>class</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<i class="glyphicon glyphicon-heart"></i>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;i class=&quot;glyphicon glyphicon-heart&quot;&gt;&lt;/i&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="image">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Image</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; image }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>source</strong> - String</li>
+<li><strong>class</strong> - String</li>
+<li><strong>alt</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<img src="https://unsplash.it/300/300/?random" alt="alt text">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;img src=&quot;https://unsplash.it/300/300/?random&quot; alt=&quot;alt text&quot;&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="image-variation">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Image Variation</h2>
+	</div>
+		<div class="f-item-group" id="image-variation.image-circle">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Image Circle</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; image class=&quot;img-circle&quot; }}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<img src="https://unsplash.it/300/300/?random" alt="alt text" class="img-circle">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;img src=&quot;https://unsplash.it/300/300/?random&quot; alt=&quot;alt text&quot; class=&quot;img-circle&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="image-variation.image-rounded">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Image Rounded</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; image class=&quot;img-rounded&quot; }}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<img src="https://unsplash.it/300/300/?random" alt="alt text" class="img-rounded">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;img src=&quot;https://unsplash.it/300/300/?random&quot; alt=&quot;alt text&quot; class=&quot;img-rounded&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="image-variation.img-thumbnail">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Img Thumbnail</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; image class=&quot;img-thumbnail&quot; }}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<img src="https://unsplash.it/300/300/?random" alt="alt text" class="img-thumbnail">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;img src=&quot;https://unsplash.it/300/300/?random&quot; alt=&quot;alt text&quot; class=&quot;img-thumbnail&quot;&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="inline-elements">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Inline Elements</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<p>
+  The <small>small element</small>
+  <br> The <abbr>abbreviation element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples
+  <br> The <b>bold element</b> example
+  <br> The <cite>citation element</cite> example
+  <br> The <code>code element</code> example
+  <br> The <del>deleted element</del> example
+  <br> The <dfn>definition element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples
+  <br> The <em>em element</em> example
+  <br> The <i>italic element</i> example
+  <br> The image element <img src="http://placehold.it/120x25" alt="image description"> example
+  <br> The <ins>insert element</ins> example
+  <br> The <kbd>keyboard element</kbd> example
+  <br> The
+  <mark>marked element</mark> example
+  <br> The <q>quote element <q>inside</q> a q element</q> example
+  <br> The <s>strikethrough element</s> example
+  <br> The <samp>sample element</samp> example
+  <br> The <small>small element</small> example
+  <br> The <span>span element</span> example
+  <br> The <strong>strong element</strong> example
+  <br> The <sub>sub element</sub> example
+  <br> The <sup>sup element</sup> example
+  <br> The <var>variable element</var> example
+  <br> The <u>underline element</u> example
+</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p&gt;
+  The &lt;small&gt;small element&lt;/small&gt;
+  &lt;br&gt; The &lt;abbr&gt;abbreviation element&lt;/abbr&gt; and &lt;abbr title=&quot;Title text&quot;&gt;abbr element with title&lt;/abbr&gt; examples
+  &lt;br&gt; The &lt;b&gt;bold element&lt;/b&gt; example
+  &lt;br&gt; The &lt;cite&gt;citation element&lt;/cite&gt; example
+  &lt;br&gt; The &lt;code&gt;code element&lt;/code&gt; example
+  &lt;br&gt; The &lt;del&gt;deleted element&lt;/del&gt; example
+  &lt;br&gt; The &lt;dfn&gt;definition element&lt;/dfn&gt; and &lt;dfn title=&quot;Title text&quot;&gt;dfn element with title&lt;/dfn&gt; examples
+  &lt;br&gt; The &lt;em&gt;em element&lt;/em&gt; example
+  &lt;br&gt; The &lt;i&gt;italic element&lt;/i&gt; example
+  &lt;br&gt; The image element &lt;img src=&quot;http://placehold.it/120x25&quot; alt=&quot;image description&quot;&gt; example
+  &lt;br&gt; The &lt;ins&gt;insert element&lt;/ins&gt; example
+  &lt;br&gt; The &lt;kbd&gt;keyboard element&lt;/kbd&gt; example
+  &lt;br&gt; The
+  &lt;mark&gt;marked element&lt;/mark&gt; example
+  &lt;br&gt; The &lt;q&gt;quote element &lt;q&gt;inside&lt;/q&gt; a q element&lt;/q&gt; example
+  &lt;br&gt; The &lt;s&gt;strikethrough element&lt;/s&gt; example
+  &lt;br&gt; The &lt;samp&gt;sample element&lt;/samp&gt; example
+  &lt;br&gt; The &lt;small&gt;small element&lt;/small&gt; example
+  &lt;br&gt; The &lt;span&gt;span element&lt;/span&gt; example
+  &lt;br&gt; The &lt;strong&gt;strong element&lt;/strong&gt; example
+  &lt;br&gt; The &lt;sub&gt;sub element&lt;/sub&gt; example
+  &lt;br&gt; The &lt;sup&gt;sup element&lt;/sup&gt; example
+  &lt;br&gt; The &lt;var&gt;variable element&lt;/var&gt; example
+  &lt;br&gt; The &lt;u&gt;underline element&lt;/u&gt; example
+&lt;/p&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="input">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Input</h2>
+	</div>
+		<div class="f-item-group" id="input.checkbox">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Checkbox</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; input.checkbox }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>label</strong> - String</li>
+<li><strong>value</strong> - String</li>
+<li><strong>inline</strong> - Boolean</li>
+<li><strong>attributes</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<div class="checkbox">
+  <label>
+    <input type="checkbox" value="custom"> Checkbox label
+  </label>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;checkbox&quot;&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot; value=&quot;custom&quot;&gt; Checkbox label
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="input.radio">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Radio</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; input.radio }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>label</strong> - String</li>
+<li><strong>value</strong> - String</li>
+<li><strong>name</strong> - String</li>
+<li><strong>inline</strong> - Boolean</li>
+<li><strong>attributes</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<div class="radio">
+  <label>
+    <input type="radio" value="custom" name="custom"> Radio label
+  </label>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;radio&quot;&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;radio&quot; value=&quot;custom&quot; name=&quot;custom&quot;&gt; Radio label
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="input.select">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Select</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<select class="form-control">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;select class=&quot;form-control&quot;&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="input.text">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Text</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; input.text }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>id</strong> - String</li>
+<li><strong>type</strong> - String</li>
+<li><strong>value</strong> - String</li>
+<li><strong>modifiers</strong> - String</li>
+<li><strong>attributes</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<input type="text" class="form-control" placeholder="Text input">
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Text input&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="input.textarea">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Textarea</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<textarea class="form-control" rows="3"></textarea>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;textarea class=&quot;form-control&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="input.variations">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Variations</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; input.text modifiers=&quot;input-lg&quot; }}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<input type="text" class="form-control input-lg" placeholder="Text input">
+<br>
+<input type="text" class="form-control input-sm" placeholder="Text input">
+<br>
+<input type="text" class="form-control" placeholder="Text input" disabled>
+<br>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;input type=&quot;text&quot; class=&quot;form-control input-lg&quot; placeholder=&quot;Text input&quot;&gt;
+&lt;br&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control input-sm&quot; placeholder=&quot;Text input&quot;&gt;
+&lt;br&gt;
+&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Text input&quot; disabled&gt;
+&lt;br&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="labels">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Labels</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; label }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>modifiers</strong> - String</li>
+<li><strong>content</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<span class="label label-primary">My label</span>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;span class=&quot;label label-primary&quot;&gt;My label&lt;/span&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="link">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Link</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; link }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>url</strong> - String</li>
+<li><strong>attributes</strong> - String</li>
+<li><strong>label</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<a href="#">link</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="link-button">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Link Button</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; link-button }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>url</strong> - String</li>
+<li><strong>modifiers</strong> - String</li>
+<li><strong>attributes</strong> - String</li>
+<li><strong>label</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<a href="#" class="btn">link</a>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;link&lt;/a&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="list">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">List</h2>
+	</div>
+		<div class="f-item-group" id="list.ordered">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Ordered</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<ol>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ol>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+    </ol>
+  </li>
+  <li>Vestibulum laoreet porttitor sem</li>
+</ol>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ol&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;
+    Integer molestie lorem at massa
+    &lt;ol&gt;
+      &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+      &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vestibulum laoreet porttitor sem&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="list.unordered">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Unordered</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<ul>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ul>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+    </ul>
+  </li>
+  <li>Vestibulum laoreet porttitor sem</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;
+    Integer molestie lorem at massa
+    &lt;ul&gt;
+      &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+      &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vestibulum laoreet porttitor sem&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="list.unstyled">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Unstyled</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<ul class="list-unstyled">
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ul>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+    </ul>
+  </li>
+  <li>Vestibulum laoreet porttitor sem</li>
+</ul>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;ul class=&quot;list-unstyled&quot;&gt;
+  &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+  &lt;li&gt;Consectetur adipiscing elit&lt;/li&gt;
+  &lt;li&gt;
+    Integer molestie lorem at massa
+    &lt;ul&gt;
+      &lt;li&gt;Facilisis in pretium nisl aliquet&lt;/li&gt;
+      &lt;li&gt;Nulla volutpat aliquam velit&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vestibulum laoreet porttitor sem&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="paragraph">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Paragraph</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; paragraph }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>class</strong> - String</li>
+<li><strong>attributes</strong> - String</li>
+<li><strong>content</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. An potest, inquit ille, quicquam esse suavius quam nihil dolere? Philosophi autem in suis lectulis plerumque moriuntur. Potius inflammat, ut coercendi magis quam dedocendi esse videantur.
+</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. An potest, inquit ille, quicquam esse suavius quam nihil dolere? Philosophi autem in suis lectulis plerumque moriuntur. Potius inflammat, ut coercendi magis quam dedocendi esse videantur.
+&lt;/p&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="paragraph-variations">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Paragraph Variations</h2>
+	</div>
+		<div class="f-item-group" id="paragraph-variations.contextual-background">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Contextual Background</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; paragraph class='bg-success' content=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot; }}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<p class="bg-primary">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+<p class="bg-success">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+<p class="bg-info">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+<p class="bg-warning">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+<p class="bg-danger">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p class=&quot;bg-primary&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;
+&lt;p class=&quot;bg-success&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;
+&lt;p class=&quot;bg-info&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;
+&lt;p class=&quot;bg-warning&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;
+&lt;p class=&quot;bg-danger&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="paragraph-variations.contextual-color">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Contextual Color</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; paragraph class='text-success' content=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot; }}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<p class="text-muted">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+<p class="text-primary">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+<p class="text-success">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+<p class="text-info">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+<p class="text-warning">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+<p class="text-danger">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p class=&quot;text-muted&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;
+&lt;p class=&quot;text-info&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;
+&lt;p class=&quot;text-warning&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;
+&lt;p class=&quot;text-danger&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+&lt;/p&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="paragraph-variations.paragraph-lead">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Paragraph Lead</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Example : <code>{{&gt; paragraph class='lead' content=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc dixerit potius Ennius: Nimium boni est, cui nihil est mali.&quot; }}</code></h5>
+
+</div>
+<div class="f-item-preview">
+	<p class="lead">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc dixerit potius Ennius: Nimium boni est, cui nihil est mali.
+</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p class=&quot;lead&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc dixerit potius Ennius: Nimium boni est, cui nihil est mali.
+&lt;/p&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+
+      </div>
+      <script src="/build/js/styleguide.min.js"></script>
+    <script src="/build/js/vendors.min.js"></script>
+  </body>
+</html>
