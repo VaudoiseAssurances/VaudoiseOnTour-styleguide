@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width">
 
       <link rel="stylesheet" href="./build/css/styleguide.css">
+    <link rel="stylesheet" href="./build/css/vendors.min.css">
     <link rel="stylesheet" href="./build/css/main.css">
 
     <!--[if lt IE 9]>
@@ -242,62 +243,64 @@
 
     
 
-<h1>Overview</h1>
-
-<p>This UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
-
-<p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
-
+<h1>Vaudoise on Tour - Styleguide</h1>
+<p>You can view all the UI components in the <a href="http://antistatique.github.io/vaudoiseontour/">styleguide</a> !</p>
+<h2>Overview</h2>
+<hr>
+  <div class="f-color-chips">
+    <div class="f-color-chip">
+      <div class="f-color-chip__name">black</div>
+      <div class="f-color-chip__color">#000</div>
+    </div>
+    <div class="f-color-chip">
+      <div class="f-color-chip__name">white</div>
+      <div class="f-color-chip__color">#fff</div>
+    </div>
+  </div>
+  <div class="f-color-chips">
+    <div class="f-color-chip">
+      <div class="f-color-chip__name">green</div>
+      <div class="f-color-chip__color">#007D32</div>
+    </div>
+  </div>
+<h1>Title level 1</h1>
+<h2>Title level 2</h2>
+<h3>Title level 3</h3>
+<h4>Title level 4</h4>
+<h5>Title level 5</h5>
+<h6>Title level 6</h6>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae contraria sunt his, malane? Certe non potest. Ex ea difficultate illae fallaciloquae, ut ait Accius, malitiae natae sunt. Illum mallem levares, quo optimum atque humanissimum virum, Cn. In quo etsi est magnus, tamen nova pleraque et perpauca de moribus. Nobis aliter videtur, recte secusne, postea;</p>
+<ul>
+<li>lorem</li>
+<li>ipsum</li>
+<li>dolor</li>
+<li>sit</li>
+<li>amet</li>
+</ul>
+<hr>
+<h2>Installation</h2>
+<pre><code class="lang-shell"><span class="hljs-variable">$ </span>npm install
+<span class="hljs-variable">$ </span>bower install
+<span class="hljs-variable">$ </span>gulp
+</code></pre>
+<h2>Development</h2>
+<pre><code class="lang-shell"><span class="hljs-variable">$ </span>gulp serve
+</code></pre>
 <h2>Usage</h2>
+<p>Use the builded files in your code :</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"build/css/vendors.min.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"build/css/main.css"</span>&gt;</span>
 
-<p>Start by adding the following files to your page:</p>
-
-<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
-
-<pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
-
-
-<h2>Color</h2>
-
-	<div class="f-color-chips">
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Dark</div>
-			<div class="f-color-chip__color">rgb(30, 30, 30)</div>
-		</div>
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Light</div>
-			<div class="f-color-chip__color">rgb(242, 242, 242)</div>
-		</div>
-	</div>
-	<div class="f-color-chips">
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Red</div>
-			<div class="f-color-chip__color">rgb(201, 55, 6)</div>
-		</div>
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Yellow</div>
-			<div class="f-color-chip__color">rgb(252, 207, 80)</div>
-		</div>
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">Blue</div>
-			<div class="f-color-chip__color">rgb(39, 102, 143)</div>
-		</div>
-	</div>
-
-<h2>Typography</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim sunt sapiente molestias, sed dicta inventore consectetur beatae asperiores, aliquid laboriosam animi, praesentium repudiandae et, quam saepe sint cupiditate reiciendis.</p>
-
-<h1>Heading Level 1</h1>
-<h2>Heading Level 2</h2>
-<h3>Heading Level 3</h3>
-<h4>Heading Level 4</h4>
-<h5>Heading Level 5</h5>
-<h6>Heading Level 6</h6>
-
+<span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
+  &lt;script src="build/js/polyfills.min.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"build/js/vendors.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"build/js/main.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
 
       </div>
       <script src="./build/js/styleguide.min.js"></script>
     <script src="./build/js/vendors.min.js"></script>
+    <script src="./build/js/main.min.js"></script>
   </body>
 </html>
