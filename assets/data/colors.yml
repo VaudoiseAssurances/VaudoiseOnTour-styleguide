@@ -1,0 +1,5 @@
+primary:
+  black: "#000"
+  white: "#fff"
+secondary:
+  green: "#007D32"
