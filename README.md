@@ -1,4 +1,4 @@
-# Vaudoise on Tour - Styleguide
+# VaudoiseOnTour
 
 You can view all the UI components in the [styleguide](http://antistatique.github.io/vaudoiseontour/) !
 
