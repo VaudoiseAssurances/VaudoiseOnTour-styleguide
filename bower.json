@@ -5,6 +5,7 @@
     "respond": "1.4.2",
     "bootstrap-sass": "~3.3.4",
     "jquery": "~2.1.1",
-    "fabricator": "git@github.com:fbrctr/fabricator.git"
+    "fabricator": "git@github.com:fbrctr/fabricator.git",
+    "jquery-focuspoint": "~1.1.1"
   }
 }

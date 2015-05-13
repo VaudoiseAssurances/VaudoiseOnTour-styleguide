@@ -8,6 +8,7 @@
 
 // Mixins ----------------------------------
 @import 'mixins/themes';
+@import 'mixins/position';
 
 // Atoms -----------------------------------
 @import 'atoms/alerts';
@@ -46,6 +47,7 @@
 @import 'molecules/tooltips';
 @import 'molecules/well';
 @import 'molecules/social-pill';
+@import 'molecules/thumbnail-cover';
 
 // Organisms --------------------------------
 @import 'organisms/footer';
