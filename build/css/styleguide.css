@@ -7,7 +7,9 @@
  * Github-like theme for Prism.js
  * @author Luke Askew http://github.com/lukeaskew
  */
-code, code[class*='language-'], pre[class*='language-'] {
+code,
+code[class*='language-'],
+pre[class*='language-'] {
   color: #333;
   text-align: left;
   white-space: pre;
@@ -22,7 +24,8 @@ code, code[class*='language-'], pre[class*='language-'] {
   font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   line-height: 1.4;
   direction: ltr;
-  cursor: text; }
+  cursor: text;
+  letter-spacing: normal; }
 
 pre[class*='language-'] {
   overflow: auto;
@@ -31,34 +34,65 @@ pre[class*='language-'] {
   border-radius: 3px;
   font-size: 85%; }
 
-p code, li code, table code {
+p code,
+li code,
+table code {
   margin: 0;
   border-radius: 3px;
   padding: 0.2em 0;
   font-size: 85%; }
-  p code:before, p code:after, li code:before, li code:after, table code:before, table code:after {
+  p code:before,
+  p code:after,
+  li code:before,
+  li code:after,
+  table code:before,
+  table code:after {
     letter-spacing: -0.2em;
     content: '\00a0'; }
 
-code, :not(pre) > code[class*='language-'], pre[class*='language-'] {
+code,
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
   background: #f7f7f7; }
 
 :not(pre) > code[class*='language-'] {
   padding: 0.1em;
   border-radius: 0.3em; }
 
-.token.comment, .token.prolog, .token.doctype, .token.cdata {
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
   color: #969896; }
-.token.punctuation, .token.string, .token.atrule, .token.attr-value {
+
+.token.punctuation,
+.token.string,
+.token.atrule,
+.token.attr-value {
   color: #183691; }
-.token.property, .token.tag {
+
+.token.property,
+.token.tag {
   color: #63a35c; }
-.token.boolean, .token.number {
+
+.token.boolean,
+.token.number {
   color: #0086b3; }
-.token.selector, .token.attr-name, .token.attr-value .punctuation:first-child, .token.keyword, .token.regex, .token.important {
+
+.token.selector,
+.token.attr-name,
+.token.attr-value .punctuation:first-child,
+.token.keyword,
+.token.regex,
+.token.important {
   color: #a71d5d; }
-.token.operator, .token.entity, .token.url, .language-css .token.string {
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string {
   color: #a71d5d; }
+
 .token.entity {
   cursor: help; }
 
@@ -110,7 +144,8 @@ code, :not(pre) > code[class*='language-'], pre[class*='language-'] {
           box-sizing: border-box; }
   .f-controls:after {
     clear: both; }
-  .f-controls:before, .f-controls:after {
+  .f-controls:before,
+  .f-controls:after {
     display: table;
     content: ' '; }
   .f-controls .f-control {
@@ -149,7 +184,8 @@ code, :not(pre) > code[class*='language-'], pre[class*='language-'] {
   padding: 1rem 0; }
   .f-control-bar:after {
     clear: both; }
-  .f-control-bar:before, .f-control-bar:after {
+  .f-control-bar:before,
+  .f-control-bar:after {
     display: table;
     content: ' '; }
 
@@ -168,7 +204,8 @@ code, :not(pre) > code[class*='language-'], pre[class*='language-'] {
   border-bottom: 1px solid #cccccc; }
   .f-item-group:after {
     clear: both; }
-  .f-item-group:before, .f-item-group:after {
+  .f-item-group:before,
+  .f-item-group:after {
     display: table;
     content: ' '; }
   .f-item-group:last-child {
@@ -191,7 +228,9 @@ code, :not(pre) > code[class*='language-'], pre[class*='language-'] {
 
 .f-item-preview:after {
   clear: both; }
-.f-item-preview:before, .f-item-preview:after {
+
+.f-item-preview:before,
+.f-item-preview:after {
   display: table;
   content: ' '; }
 
@@ -203,7 +242,8 @@ code, :not(pre) > code[class*='language-'], pre[class*='language-'] {
   vertical-align: middle; }
   .f-item-heading-group:after {
     clear: both; }
-  .f-item-heading-group:before, .f-item-heading-group:after {
+  .f-item-heading-group:before,
+  .f-item-heading-group:after {
     display: table;
     content: ' '; }
 
@@ -263,7 +303,8 @@ body {
   min-height: 100vh; }
   .f-container:after {
     clear: both; }
-  .f-container:before, .f-container:after {
+  .f-container:before,
+  .f-container:after {
     display: table;
     content: ' '; }
   .f-menu-active .f-container {
