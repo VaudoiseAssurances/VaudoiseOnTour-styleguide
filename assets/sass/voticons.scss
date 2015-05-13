@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "voticons";
+  src: url('../fonts/voticons.eot');
+  src: url('../fonts/voticons.eot?#iefix') format('eot'),
+    url('../fonts/voticons.woff') format('woff'),
+    url('../fonts/voticons.ttf') format('truetype'),
+    url('../fonts/voticons.svg#voticons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.voticons:before {
+  display: inline-block;
+  font-family: "voticons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.voticons-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.voticons-2x { font-size: 2em; }
+.voticons-3x { font-size: 3em; }
+.voticons-4x { font-size: 4em; }
+.voticons-5x { font-size: 5em; }
+.voticons-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.voticons-bike:before { content: "\E001" }
+.voticons-calendar:before { content: "\E002" }
+.voticons-camera:before { content: "\E003" }
+.voticons-chevron-left:before { content: "\E004" }
+.voticons-close:before { content: "\E005" }
+.voticons-facebook:before { content: "\E006" }
+.voticons-heart:before { content: "\E007" }
+.voticons-music:before { content: "\E008" }
+.voticons-pen:before { content: "\E009" }
+.voticons-play:before { content: "\E00A" }
+.voticons-runner:before { content: "\E00B" }
+.voticons-twitter:before { content: "\E00C" }
+.voticons-youtube:before { content: "\E00D" }
