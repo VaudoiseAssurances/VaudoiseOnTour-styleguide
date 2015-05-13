@@ -1,0 +1,11 @@
+@mixin theme ($bg) {
+  background: $bg;
+}
+
+.meadowy {
+  @include theme($mountain-meadow);
+}
+
+.salemy {
+  @include theme($salem);
+}

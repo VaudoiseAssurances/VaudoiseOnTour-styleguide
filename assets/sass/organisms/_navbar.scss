@@ -1,0 +1,85 @@
+.navbar .nav {
+  li {
+    display: inline;
+    float: none;
+  }
+  a {
+    border-radius: $navbar-height;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 5px;
+    display: inline-block;
+    transition: background 0.3s;
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    li, a {
+      display: block;
+      width: 100%;
+      border: none !important;
+      border-radius: 0;
+    }
+    &.text-center,
+    &.text-right {
+      text-align: left;
+    }
+  }
+}
+
+.meadowy .navbar-default .navbar-nav.text-center > .active > a,
+.meadowy .navbar-default .navbar-nav.text-center > .active > a:hover,
+.meadowy .navbar-default .navbar-nav.text-center > .active > a:focus,
+.meadowy .navbar-default .navbar-nav.text-center > li > a:hover,
+.meadowy .navbar-default .navbar-nav.text-center > li > a:focus {
+  background: $green-haze;
+}
+
+.navbar-brand {
+  padding-left: 0;
+  img {
+    max-width: 80%;
+    @media only screen and (max-width: $screen-xs-max) {
+      margin-top: 5px;
+    }
+  }
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 0px;
+  left: auto;
+  bottom: auto;
+  right: 5px;
+  margin-right: 0px;
+}
+
+.navbar-default .navbar-lang {
+  padding-top: 12px;
+  li {padding: 0;}
+  li a {
+    background: none;
+    border: 1px solid desaturate(lighten($mountain-meadow, 50%), 50%);
+    font-size: 16px;
+    padding: 2px 10px;
+    border-radius: 0 $navbar-height $navbar-height 0;
+    margin: 0;
+    display: inline;
+    color: desaturate(lighten($mountain-meadow, 50%), 50%);
+  }
+  li:first-child a {
+    border-radius: $navbar-height 0 0 $navbar-height;
+  }
+  li.active a,
+  li a:hover,
+  li a:focus {
+    border-color: $white;
+    background: none !important;
+  }
+
+  @media only screen and (max-width: $screen-xs-max) {
+    li a {
+      display: block;
+      padding: 10px 15px;
+      margin: 0px 5px;
+    }
+  }
+}

@@ -6,6 +6,8 @@
 @import 'main-variables';
 @import 'bootstrap';
 
+// Mixins ----------------------------------
+@import 'mixins/themes';
 
 // Atoms -----------------------------------
 @import 'atoms/alerts';
