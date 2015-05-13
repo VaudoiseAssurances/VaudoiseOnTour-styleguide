@@ -3,41 +3,76 @@ title: Overview | Fabricator
 fabricator: true
 ---
 
-<h1>Overview</h1>
+{{#markdown}}
 
-<p>This UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
+# Vaudoise on Tour - Styleguide
 
-<p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
+## Overview
 
-<h2>Usage</h2>
+--------------------
 
-<p>Start by adding the following files to your page:</p>
-
-<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
-
-<pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
-
-
-<h2>Color</h2>
+#### Colors
 
 {{#each colors}}
-	<div class="f-color-chips">
-	{{#each this}}
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
-		</div>
-	{{/each}}
-	</div>
+  <div class="f-color-chips">
+  {{#each this}}
+    <div class="f-color-chip">
+      <div class="f-color-chip__name">{{@key}}</div>
+      <div class="f-color-chip__color">{{this}}</div>
+    </div>
+  {{/each}}
+  </div>
 {{/each}}
 
-<h2>Typography</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim sunt sapiente molestias, sed dicta inventore consectetur beatae asperiores, aliquid laboriosam animi, praesentium repudiandae et, quam saepe sint cupiditate reiciendis.</p>
+#### Typography
 
-<h1>Heading Level 1</h1>
-<h2>Heading Level 2</h2>
-<h3>Heading Level 3</h3>
-<h4>Heading Level 4</h4>
-<h5>Heading Level 5</h5>
-<h6>Heading Level 6</h6>
+# Title level 1
+## Title level 2
+### Title level 3
+#### Title level 4
+##### Title level 5
+###### Title level 6
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae contraria sunt his, malane? Certe non potest. Ex ea difficultate illae fallaciloquae, ut ait Accius, malitiae natae sunt. Illum mallem levares, quo optimum atque humanissimum virum, Cn. In quo etsi est magnus, tamen nova pleraque et perpauca de moribus. Nobis aliter videtur, recte secusne, postea;
+
+* lorem
+* ipsum
+* dolor
+* sit
+* amet
+
+--------------------
+
+
+## Installation
+
+````shell
+$ npm install
+$ bower install
+$ gulp
+````
+
+## Development
+
+````shell
+$ gulp serve
+````
+
+## Usage
+
+Use the builded files in your code :
+
+````html
+<link rel="stylesheet" href="build/css/vendors.min.css">
+<link rel="stylesheet" href="build/css/main.css">
+
+<!--[if lt IE 9]>
+  <script src="build/js/polyfills.min.js"></script>
+<![endif]-->
+<script src="build/js/vendors.min.js"></script>
+<script src="build/js/main.min.js"></script>
+````
+
+
+{{/markdown}}
