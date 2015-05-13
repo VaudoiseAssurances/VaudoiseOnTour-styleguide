@@ -1,3 +1,7 @@
+---
+notes: |
+  If `cover` is defined or `true` in the context page, the header will be in absolute with the `.header-oncover`. Otherwise, the `.salemy` class will be added for a green background.
+---
 <header class="{{#if cover}}header-oncover{{else}}salemy{{/if}}">
   {{> navbar }}
   {{> social-pill }}
