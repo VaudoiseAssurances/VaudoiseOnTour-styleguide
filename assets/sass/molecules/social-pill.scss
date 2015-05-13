@@ -1,0 +1,22 @@
+.social-pill-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: $screen-lg;
+  margin: 0 auto;
+  @media only screen and (max-width: 1500px) {
+    max-width: 9999999px;
+  }
+}
+
+.social-pill {
+  position: absolute;
+  right: 15px;
+  top: 30px;
+  background: $salem-transparent;
+  padding: 15px 30px 20px 30px;
+  border-radius: 60px;
+  @media only screen and (max-width: 1500px) {
+    border-radius: 60px 0 0 60px;
+    right: 0;
+  }
+}

@@ -1,0 +1,32 @@
+a.icon-circle {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 38px;
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+
+.icon-facebook:hover {
+  color: #3b5998;
+  border-color: #3b5998;
+}
+.icon-twitter:hover {
+  color: #00aced;
+  border-color: #00aced;
+}
+.icon-youtube:hover {
+  color: #bb0000;
+  border-color: #bb0000;
+}
+
+.icon-heart {
+  position: relative;
+  top: 7px;
+  color: #D15769;
+  font-size: 30px;
+}
