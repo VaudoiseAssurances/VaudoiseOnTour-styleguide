@@ -1,8 +1,0 @@
-node_modules
-bower_components
-dist
-build
-styleguide
-.sass-cache
-.publish
-*.DS_Store
