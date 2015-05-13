@@ -1,5 +1,6 @@
 .thumbnail-cover {
   position: relative;
+  background: $jewel;
   .focuspoint {
     height: 550px;
   }
@@ -9,7 +10,14 @@
     transition: opacity 0.3s;
     opacity: 0.65;
   }
-  a:hover .gradient {opacity: 0.85;}
+  a:hover {
+    .gradient {opacity: 0.85;}
+    img {transform: scale(1.05);}
+  }
+  img {
+    transform: scale(1);
+    transition: all 0.3s;
+  }
   a {color: $white;}
   h1 {
     margin-top: 0.4em;
