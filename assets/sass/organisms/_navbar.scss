@@ -11,6 +11,12 @@
     display: inline-block;
     transition: background 0.3s;
   }
+  @media only screen and (max-width: $screen-sm-max) {
+    a {
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+  }
   @media only screen and (max-width: $screen-xs-max) {
     li, a {
       display: block;
@@ -34,11 +40,15 @@
 }
 
 .navbar-brand {
-  padding-left: 0;
-  img {
-    max-width: 80%;
-    @media only screen and (max-width: $screen-xs-max) {
-      margin-top: 5px;
+  padding-right: 0;
+  @media only screen and (max-width: $screen-sm-max) {
+    margin-top: 5px;
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    padding-left: 0;
+    img {
+      max-width: 80%;
+      margin-top: 10px;
     }
   }
 }
@@ -52,8 +62,12 @@
   margin-right: 0px;
 }
 
+.navbar-right {
+  margin-right: -15px;
+}
+
 .navbar-default .navbar-lang {
-  padding-top: 12px;
+  padding-top: 5px;
   li {padding: 0;}
   li a {
     background: none;
@@ -74,7 +88,6 @@
     border-color: $white;
     background: none !important;
   }
-
   @media only screen and (max-width: $screen-xs-max) {
     li a {
       display: block;

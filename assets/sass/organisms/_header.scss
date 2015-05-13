@@ -1,0 +1,18 @@
+header {
+  padding: 45px 0 5px 0;
+  @media only screen and (max-width: $screen-sm-max) {
+    padding: 15px 0 0 0;
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    padding: 0;
+  }
+}
+
+.header-oncover {
+  position: absolute;
+  width: 100%;
+  @media only screen and (max-width: $screen-xs-max) {
+    background: $salem;
+    position: static;
+  }
+}
