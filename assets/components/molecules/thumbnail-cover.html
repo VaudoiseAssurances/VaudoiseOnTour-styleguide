@@ -1,20 +1,39 @@
+---
+notes: |
+  ##### Usage : `{{> thumbnail-cover }}`
+  ##### Options :
+  - **thumbnail-large** - boolean
+  - **thumbnail-voticon** - String
+  - **thumbnail-title** - String
+  - **thumbnail-subtitle** - String
+  - **thumbnail-img** - String
+---
+
 <div class="thumbnail-cover">
-  <a href="{{ url }}">
+  <a href="{{#if thumbnail-url}}{{thumbnail-url}}{{^}}#{{/if}}">
     <div class="absolute-wrapper gradient"></div>
     <div class="bottom-wrapper">
       <div class="container">
-        <i class="voticons voticons-bike voticons-lg"></i>
-        <h1>Tralala</h1>
-        <h5>Truluu</h5>
+        <div class="row">
+          <div class="col-sm-8">
+            <i class="voticons voticons-{{#if thumbnail-voticon}}{{thumbnail-voticon}}{{^}}heart{{/if}} voticons-lg"></i>
+            <h1>{{#if thumbnail-title}}{{thumbnail-title}}{{^}}title{{/if}}</h1>
+            <h5>{{#if thumbnail-subtitle}}{{thumbnail-subtitle}}{{^}}subtitle{{/if}}</h5>
+          </div>
+          <div class="col-sm-4 text-right">
+            <div class="spacer spacer-sm"></div>
+            {{> icon-button outlined=true }}
+          </div>
+        </div>
         <div class="spacer spacer-sm"></div>
       </div>
     </div>
     <div class="focuspoint"
       data-focus-x="0"
       data-focus-y="-0"
-      data-image-w="1920"
-      data-image-h="550">
-      <img src="https://unsplash.it/1920/550/?random" />
+      data-image-w="{{#if thumbnail-large}}{{ medias.formats.thumbnails.large.width }}{{/if}}"
+      data-image-h="{{#if thumbnail-large}}{{ medias.formats.thumbnails.large.height }}{{/if}}">
+      <img src="{{#if thumbnail-img}}{{thumbnail-img}}{{^}}https://unsplash.it/1920/550/?random{{/if}}" />
     </div>
   </a>
 </div>

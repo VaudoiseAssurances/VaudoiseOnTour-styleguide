@@ -1,4 +1,23 @@
-<a href="#" class="icon-button icon-button-plain">
-  <span>Voir la gallerie</span>
-  <i class="voticons voticons-camera"></i>
+---
+notes: |
+  ##### Usage : `{{> thumbnail-cover }}`
+  ##### Options :
+  - **button-link** - boolean
+  - **button-plain** - boolean
+  - **button-outlined** - boolean
+  - **button-large** - boolean
+  - **button-label** - String
+  - **button-voticon** - String
+---
+
+{{#if button-link}}
+<a href="{{#if button-url}}{{button-url}}{{^}}#{{/if}}" class="icon-button {{#if button-large}}icon-button-lg{{/if}} {{#if button-plain}}icon-button-plain{{/if}} {{#if button-outlined}}icon-button-outlined{{/if}}">
+  <span>{{#if button-label}}{{button-label}}{{^}}label{{/if}}</span>
+  <i class="voticons voticons-{{#if button-voticon}}{{button-voticon}}{{^}}heart{{/if}}"></i>
 </a>
+{{^}}
+<button class="icon-button {{#if button-large}}icon-button-lg{{/if}} {{#if button-plain}}icon-button-plain{{/if}} {{#if button-outlined}}icon-button-outlined{{/if}}">
+  <span>{{#if button-label}}{{button-label}}{{^}}label{{/if}}</span>
+  <i class="voticons voticons-{{#if button-voticon}}{{button-voticon}}{{^}}heart{{/if}}"></i>
+</button>
+{{/if}}

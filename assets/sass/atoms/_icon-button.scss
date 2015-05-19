@@ -1,8 +1,9 @@
 .icon-button {
   display: inline-block;
-  width: 55px;
+  width: auto;
   height: 55px;
   padding: 0 15px;
+  background: none;
   box-sizing: border-box;
   text-align: center;
   line-height: 57px;
@@ -10,39 +11,28 @@
   position: relative;
   clip:rect(0, 0, 55px, 55px);
 
-  &.icon-button-outlined {
-
-  }
   &.icon-button-plain {
     background: $brand-primary;
     color: $white;
+    transition: background 0.3s;
+  }
+  &.icon-button-outlined {
+    border: 1px solid $white;
+  }
+  &.icon-button-lg {
+    height: 65px;
+    line-height: 60px;
+    font-size: 1.2em;
+    .voticons {font-size: 1.2em;}
   }
 
   span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 22.5px;
-    max-width: 0px;
-    height: 55px;
-    border-radius: 100px 0 0 100px;
-    padding: 0 15px;
-    box-sizing: border-box;
-    text-transform: uppercase;
-    white-space: nowrap;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 50px;
-    background: red;
-
-    transition: all 1s;
+    padding-right: 10px;
   }
 
   &:hover {
     text-decoration: none;
-    span {
-      max-width: 2000px;
-    }
+    &.icon-button-plain {background: $salem;}
   }
+
 }

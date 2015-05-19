@@ -18,7 +18,10 @@
     transform: scale(1);
     transition: all 0.3s;
   }
-  a {color: $white;}
+  a {
+    color: $white;
+    display: block;
+  }
   h1 {
     margin-top: 0.4em;
   }
