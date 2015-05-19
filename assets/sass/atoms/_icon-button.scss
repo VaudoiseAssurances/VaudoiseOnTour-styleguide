@@ -25,6 +25,12 @@
     font-size: 1.2em;
     .voticons {font-size: 1.2em;}
   }
+  &.icon-button-sm {
+    height: 45px;
+    line-height: 47px;
+    font-size: 0.8em;
+    .voticons {font-size: 0.8em;}
+  }
 
   span {
     padding-right: 10px;

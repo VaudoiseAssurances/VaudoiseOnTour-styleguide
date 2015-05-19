@@ -6,17 +6,18 @@ notes: |
   - **button-plain** - boolean
   - **button-outlined** - boolean
   - **button-large** - boolean
+  - **button-small** - boolean
   - **button-label** - String
   - **button-voticon** - String
 ---
 
 {{#if button-link}}
-<a href="{{#if button-url}}{{button-url}}{{^}}#{{/if}}" class="icon-button {{#if button-large}}icon-button-lg{{/if}} {{#if button-plain}}icon-button-plain{{/if}} {{#if button-outlined}}icon-button-outlined{{/if}}">
+<a href="{{#if button-url}}{{button-url}}{{^}}#{{/if}}" class="icon-button {{#if button-large}}icon-button-lg{{/if}} {{#if button-small}}icon-button-sm{{/if}} {{#if button-plain}}icon-button-plain{{/if}} {{#if button-outlined}}icon-button-outlined{{/if}}">
   <span>{{#if button-label}}{{button-label}}{{^}}label{{/if}}</span>
   <i class="voticons voticons-{{#if button-voticon}}{{button-voticon}}{{^}}heart{{/if}}"></i>
 </a>
 {{^}}
-<button class="icon-button {{#if button-large}}icon-button-lg{{/if}} {{#if button-plain}}icon-button-plain{{/if}} {{#if button-outlined}}icon-button-outlined{{/if}}">
+<button class="icon-button {{#if button-large}}icon-button-lg{{/if}} {{#if button-small}}icon-button-sm{{/if}} {{#if button-plain}}icon-button-plain{{/if}} {{#if button-outlined}}icon-button-outlined{{/if}}">
   <span>{{#if button-label}}{{button-label}}{{^}}label{{/if}}</span>
   <i class="voticons voticons-{{#if button-voticon}}{{button-voticon}}{{^}}heart{{/if}}"></i>
 </button>

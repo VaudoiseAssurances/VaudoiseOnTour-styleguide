@@ -1,0 +1,26 @@
+.table-calendar {
+  tr, td, th {border: none !important;}
+
+  thead {color: $white;}
+
+  .icon-button-outlined {
+    border-color: $gray;
+  }
+
+  th:first-child,
+  td:first-child {
+    vertical-align: middle;
+    padding: 10px 20px;
+  }
+
+  tbody tr:first-child td:first-child {
+    padding-top: 30px;
+    vertical-align: top;
+  }
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 .h6 {
+    margin: 0.3em 0;
+  }
+
+  blockquote {font-size: $font-size-small;}
+}
