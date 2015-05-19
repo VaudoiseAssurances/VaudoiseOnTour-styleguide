@@ -9,3 +9,11 @@
 .salemy {
   @include theme($salem);
 }
+
+.gray {
+  @include theme($gray);
+}
+
+.sandy {
+  @include theme($wild-sand);
+}

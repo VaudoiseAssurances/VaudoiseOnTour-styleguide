@@ -7,9 +7,8 @@
   box-sizing: border-box;
   text-align: center;
   line-height: 57px;
+  border: none;
   border-radius: 100px;
-  position: relative;
-  clip:rect(0, 0, 55px, 55px);
 
   &.icon-button-plain {
     background: $brand-primary;

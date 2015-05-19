@@ -1,0 +1,34 @@
+.thumbnail {
+  border: none;
+  margin: 20px 0;
+  padding: 0;
+
+  .gradient {
+    background: $jewel;
+    background: linear-gradient(to bottom, $gradient-transparent 45%,$jewel 100%);
+    transition: opacity 0.3s;
+    opacity: 0.65;
+  }
+
+  &:hover {
+    text-decoration: none;
+    .gradient {opacity: 0.85;}
+  }
+
+  .bottom-wrapper {
+    padding: 20px 30px;
+    color: $white;
+  }
+
+  .icon-button {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    bottom: -22.5px;
+    z-index: 1000;
+  }
+
+  .caption {
+    padding: 40px 30px 20px 30px;
+  }
+}

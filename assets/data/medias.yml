@@ -6,3 +6,6 @@ formats:
     medium:
       width: 740
       height: 400
+    small:
+      width: 400
+      height: 370

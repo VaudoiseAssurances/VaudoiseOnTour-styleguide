@@ -1,0 +1,24 @@
+---
+notes: |
+  ##### Usage : `{{> thumbnail }}`
+  ##### Options :
+  - **thumbnail-title** - String
+  - **thumbnail-img** - String
+  - **thumbnail-text** - String
+---
+
+<a href="{{#if thumbnail-url}}{{thumbnail-url}}{{^}}#{{/if}}" class="thumbnail">
+  <div class="thumbnail-image relative-wrapper">
+    <div class="absolute-wrapper gradient"></div>
+    <div class="bottom-wrapper">
+      <h3>{{#if thumbnail-title}}{{thumbnail-title}}{{^}}title{{/if}}</h3>
+      {{> icon-button button-plain=true }}
+    </div>
+    <img src="{{#if thumbnail-img}}{{thumbnail-img}}{{^}}https://unsplash.it/400/370/?random{{/if}}" class="img-responsive">
+  </div>
+  <div class="caption">
+    <p>
+      {{#if thumbnail-text}}{{thumbnail-text}}{{^}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quaesita enim virtus est.{{/if}}
+    </p>
+  </div>
+</a>
