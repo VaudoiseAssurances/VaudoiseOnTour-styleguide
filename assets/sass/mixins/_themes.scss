@@ -17,3 +17,7 @@
 .sandy {
   @include theme($wild-sand);
 }
+
+.alabasty {
+  @include theme($alabaster);
+}

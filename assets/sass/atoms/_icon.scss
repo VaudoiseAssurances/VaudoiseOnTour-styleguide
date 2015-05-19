@@ -9,17 +9,24 @@ a.icon-circle {
   line-height: 38px;
   transition: all 0.3s;
   margin-left: 10px;
+  &.icon-circle-lg {
+    color: $gray;
+    border-color: $gray;
+    width: 65px;
+    height: 65px;
+    line-height: 69px;
+  }
 }
 
-.icon-facebook:hover {
+.icon-facebook:hover, .icon-circle-lg.icon-facebook:hover {
   color: #3b5998;
   border-color: #3b5998;
 }
-.icon-twitter:hover {
+.icon-twitter:hover, .icon-circle-lg.icon-twitter:hover {
   color: #00aced;
   border-color: #00aced;
 }
-.icon-youtube:hover {
+.icon-youtube:hover, .icon-circle-lg.icon-youtube:hover {
   color: #bb0000;
   border-color: #bb0000;
 }
