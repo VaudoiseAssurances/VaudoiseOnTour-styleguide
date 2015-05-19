@@ -16,7 +16,7 @@
   }
 
   .bottom-wrapper {
-    padding: 20px 30px;
+    padding: 35px;
     color: $white;
   }
 
@@ -30,5 +30,10 @@
 
   .caption {
     padding: 40px 30px 20px 30px;
+  }
+
+  .carousel-control {
+    background: none;
+    border: none;
   }
 }

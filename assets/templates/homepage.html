@@ -49,9 +49,33 @@ cover: true
   <div class="spacer spacer-sm"></div>
   <div class="container">
     <div class="row">
-      <div class="col-sm-4">{{> thumbnail }}</div>
-      <div class="col-sm-4">{{> thumbnail }}</div>
-      <div class="col-sm-4">{{> thumbnail }}</div>
+      <div class="col-sm-4">
+        {{> thumbnail 
+              thumbnail-title="Omega European Master"
+              thumbnail-carousel=true
+              thumbnail-carousel-first="../build/img/vot-demo-05.jpg"
+              thumbnail-carousel-second="../build/img/vot-demo-09.jpg"
+              thumbnail-carousel-third="../build/img/vot-demo-14.jpg"
+              thumbnail-text="Matteo Manassero sera à Crans-Montana!"
+              button-label="Voir la galerie"
+              button-voticon="camera" }}
+        </div>
+      <div class="col-sm-4">
+        {{> thumbnail
+              thumbnail-title="Omega European Master"
+              thumbnail-text="Tournoi saison 2015"
+              thumbnail-img="../build/img/vot-demo-14.jpg"
+              button-label="En savoir plus"
+              button-voticon="pen" }}
+        </div>
+      <div class="col-sm-4">
+        {{> thumbnail
+              thumbnail-title="Montreux Jazz 2014"
+              thumbnail-text="Montreux Jazz Festival 2014 : Vidéo – Behind The Scenes"
+              thumbnail-img="../build/img/vot-demo-09.jpg"
+              button-label="Voir la vidéo"
+              button-voticon="video" }}
+        </div>
     </div>
   </div>
   <div class="spacer spacer-sm"></div>

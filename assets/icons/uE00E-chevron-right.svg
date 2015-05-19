@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="134px" height="230px" viewBox="0 0 134 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
-    <title>chevron-right</title>
+    <title>chevron-left</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M0,210.666667 L96.135,114.642167 L0,18.6176667 L18.6390909,0 L133.413182,114.642167 L18.6390909,229.284333 L0,210.666667 Z" id="chevron-right" fill="#000000" sketch:type="MSShapeGroup" transform="translate(66.706591, 114.642167) scale(-1, 1) translate(-66.706591, -114.642167) "></path>
+        <path d="M18.6390909,229.284333 L0,210.666667 L96.135,114.642167 L0,18.6176667 L18.6390909,0 L133.413182,114.642167 L18.6390909,229.284333" id="chevron-left" fill="#000000" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>
