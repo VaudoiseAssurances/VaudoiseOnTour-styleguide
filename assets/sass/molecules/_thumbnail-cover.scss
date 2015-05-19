@@ -1,9 +1,8 @@
 .thumbnail-cover {
   position: relative;
   background: $jewel;
-  .focuspoint {
-    height: 550px;
-  }
+  &.thumbnail-cover-lg .focuspoint {height: 550px;}
+  &.thumbnail-cover-md .focuspoint {height: 400px;}
   .gradient {
     background: $jewel;
     background: linear-gradient(to bottom,  $jewel 0%,$gradient-transparent 45%,$gradient-transparent 55%,$jewel 100%);

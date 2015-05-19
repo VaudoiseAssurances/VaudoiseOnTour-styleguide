@@ -17,11 +17,29 @@ cover: true
       button-large=true }}
 
 <div class="container">
-
+  <div class="row">
+    <div class="col-sm-7">
+      <div class="row">
+        {{> thumbnail-cover
+              thumbnail-medium=true
+              thumbnail-voticon="bike"
+              thumbnail-title="Grand concours"
+              thumbnail-subtitle="Tour de Romandie 2015"
+              thumbnail-text="Participez à notre grand concours et gagnez des week-ends à Amsterdam."
+              thumbnail-img="../build/img/vot-demo-20.jpg"
+              thumbnail-url="http://google.com"
+              button-label="Voir plus"
+              button-voticon="chevron-left"
+              button-outlined=true
+              button-large=true }}
+      </div>
+    </div>
+    <div class="col-sm-5"></div>
+  </div>
 </div>
 
-<!-- <div class="spacer spacer-xl"></div>
-
+<div class="spacer spacer-xl"></div>
+<!-- 
 <div class="container">
   {{> icon-button }}
 </div> -->
