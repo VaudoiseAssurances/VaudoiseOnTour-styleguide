@@ -1,0 +1,86 @@
+---
+cover: false
+---
+
+{{> header }}
+
+
+<div class="container">
+  {{> breadcrumb }}
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <h1 class="h2">La Vaudoise, Presenting Sponsor du Tour de Suisse</h1>
+
+      <div class="spacer spacer-sm"></div>
+
+      <p class="lead">
+        Présente en 2015 au Tour de Romandie, la Vaudoise confirme son engagement pour cette 69e édition en tant que Presenting Sponsor et complète ainsi 7 années de parcours sportif aux chiffres mirobolants.
+      </p>
+
+      {{> separator separator-size="md" }}
+
+      <p>
+        La Vaudoise maintient cette année son engagement et sa contribution tout au long du Tour en proposant différents événements et activités sur chaque étape. A l'arrivée, le public peut participer au grand jeu "Buzz'n'Win" pour remporter de nombreux prix immédiats et obtenir une photo personnalisée.
+      </p>
+      <p>
+        Une démonstration inédite par les champions de BMX Tobias Wicke et Mark König, associée à une troupe de 10 danseurs renommés sous la direction de Gracia Covre, animent la ligne d'arrivée sous les commentaires de Sarah Schütz.
+      </p>
+
+      <p>
+        Pour tous ceux qui ne pourraient pas se rendre sur place, le site <a href="http://vaudoise-on-tour.ch">vaudoise-on-tour.ch</a> présente en vidéo les coulisses du Tour et des anecdotes originales du cyclisme avec Midi Gottet, membre du Trio Eden. Les visiteurs pourront participer en ligne au grand concours Vaudoise-on-Tour et remporter des prix exceptionnels! Le Tour de Suisse se suit également chaque jour sur les pages Facebook et Twitter de la Vaudoise.
+      </p>
+
+      {{> separator separator-size="sm" }}
+      <div class="spacer spacer-sm"></div>
+
+    </div>
+    <div class="col-sm-3 col-sm-offset-1">
+      <div class="spacer spacer-sm"></div>
+
+      <h6 class="text-uppercase">Recherche (Tags)</h6>
+      {{> link-button modifiers="btn-sm btn-default text-uppercase" label="Galerie" }}
+      {{> link-button modifiers="btn-sm btn-default text-uppercase" label="Vidéo" }}
+      {{> link-button modifiers="btn-sm btn-default text-uppercase" label="Article" }}
+
+      <h6 class="text-uppercase">Édition</h6>
+      {{> link-button modifiers="btn-sm btn-default text-uppercase" label="2013" }}
+      {{> link-button modifiers="btn-sm btn-default text-uppercase" label="2014" }}
+
+      <h6 class="text-uppercase">Partager l’article</h6>
+      {{> link-button modifiers="btn-sm btn-facebook text-uppercase" label="Facebook" }}
+      {{> link-button modifiers="btn-sm btn-twitter text-uppercase" label="Twitter" }}
+    </div>
+  </div>
+</div>
+
+
+
+<div class="alabasty">
+  <div class="container">
+    <div class="row">
+      {{> thumbnail-cover
+            thumbnail-landscape=true
+            thumbnail-voticon="bike"
+            thumbnail-title="Dans le monde des petits pronostics"
+            thumbnail-subtitle="25 mars 2015"
+            thumbnail-img="../build/img/vot-demo-15.jpg"
+            thumbnail-url="http://google.com"
+            button-label="Lire l'article"
+            button-voticon="pen"
+            button-outlined=true
+            button-large=true }}
+    </div>
+  </div>
+</div>
+
+{{> featured-articles }}
+
+<div class="container">
+  {{> social-row }}
+</div>
+
+{{> partners }}
+
+{{> sitemap }}
+{{> footer }}

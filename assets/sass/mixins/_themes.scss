@@ -20,6 +20,11 @@
   @include theme($gray);
 }
 
+.chalicy {
+  @include theme($silver-chalice);
+}
+
+
 .sandy {
   @include theme($wild-sand);
 }

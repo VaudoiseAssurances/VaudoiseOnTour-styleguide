@@ -48,7 +48,7 @@ cover: true
       </p>
       {{> separator separator-size="sm" }}
 
-      <p class="text-uppercase">Partager l’article</p>
+      <h6 class="text-uppercase">Partager l’article</h6>
 
       {{> link-button modifiers="btn-facebook text-uppercase" label="Facebook" }}
       {{> link-button modifiers="btn-twitter text-uppercase" label="Twitter" }}
@@ -56,19 +56,25 @@ cover: true
       <div class="spacer"></div>
     </div>
   </div>
+</div>
 
-  <div class="row">
-    {{> thumbnail-cover
-          thumbnail-landscape=true
-          thumbnail-voticon="bike"
-          thumbnail-title="Dans le monde des petits pronostics"
-          thumbnail-subtitle="25 mars 2015"
-          thumbnail-img="../build/img/vot-demo-15.jpg"
-          thumbnail-url="http://google.com"
-          button-label="Lire l'article"
-          button-voticon="pen"
-          button-outlined=true
-          button-large=true }}
+
+
+<div class="alabasty">
+  <div class="container">
+    <div class="row">
+      {{> thumbnail-cover
+            thumbnail-landscape=true
+            thumbnail-voticon="bike"
+            thumbnail-title="Dans le monde des petits pronostics"
+            thumbnail-subtitle="25 mars 2015"
+            thumbnail-img="../build/img/vot-demo-15.jpg"
+            thumbnail-url="http://google.com"
+            button-label="Lire l'article"
+            button-voticon="pen"
+            button-outlined=true
+            button-large=true }}
+    </div>
   </div>
 </div>
 
