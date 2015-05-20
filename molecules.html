@@ -243,6 +243,9 @@
             <a href="templates.html" class="f-menu__heading">Templates</a>
             <ul>
               <li>
+                <a href="templates/article.html">Article</a>
+              </li>
+              <li>
                 <a href="templates/demo.html">Demo</a>
               </li>
               <li>
@@ -1578,9 +1581,18 @@ sagittis lacus vel augue laoreet rutrum faucibus.&quot;&gt;
 	</div><div class="f-item-notes" data-f-toggle="notes">
 	<h5>Usage : <code>{{&gt; thumbnail-cover }}</code></h5>
 <h5>Options :</h5>
+<p><strong>Format</strong></p>
 <ul>
 <li><strong>thumbnail-large</strong> - boolean</li>
+<li><strong>thumbnail-landscape</strong> - boolean</li>
 <li><strong>thumbnail-medium</strong> - boolean</li>
+</ul>
+<p><strong>State</strong></p>
+<ul>
+<li><strong>thumbnail-minimal</strong> - boolean</li>
+</ul>
+<p><strong>Content</strong></p>
+<ul>
 <li><strong>thumbnail-voticon</strong> - String</li>
 <li><strong>thumbnail-title</strong> - String</li>
 <li><strong>thumbnail-subtitle</strong> - String</li>
@@ -1589,9 +1601,11 @@ sagittis lacus vel augue laoreet rutrum faucibus.&quot;&gt;
 
 </div>
 <div class="f-item-preview">
-	<div class="thumbnail-cover  ">
+	<div class="thumbnail-cover">
   <a href="#">
     <div class="absolute-wrapper gradient"></div>
+
+
     <div class="bottom-wrapper">
       <div class="container-fluid">
         <div class="row">
@@ -1611,6 +1625,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.&quot;&gt;
         <div class="spacer spacer-sm"></div>
       </div>
     </div>
+
     <div class="focuspoint" data-focus-x="0" data-focus-y="-0" data-image-w="" data-image-h="">
       <img src="https://unsplash.it/1920/550/?random" />
     </div>
@@ -1618,9 +1633,11 @@ sagittis lacus vel augue laoreet rutrum faucibus.&quot;&gt;
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;thumbnail-cover  &quot;&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;thumbnail-cover&quot;&gt;
   &lt;a href=&quot;#&quot;&gt;
     &lt;div class=&quot;absolute-wrapper gradient&quot;&gt;&lt;/div&gt;
+
+
     &lt;div class=&quot;bottom-wrapper&quot;&gt;
       &lt;div class=&quot;container-fluid&quot;&gt;
         &lt;div class=&quot;row&quot;&gt;
@@ -1640,6 +1657,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.&quot;&gt;
         &lt;div class=&quot;spacer spacer-sm&quot;&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
+
     &lt;div class=&quot;focuspoint&quot; data-focus-x=&quot;0&quot; data-focus-y=&quot;-0&quot; data-image-w=&quot;&quot; data-image-h=&quot;&quot;&gt;
       &lt;img src=&quot;https://unsplash.it/1920/550/?random&quot; /&gt;
     &lt;/div&gt;
