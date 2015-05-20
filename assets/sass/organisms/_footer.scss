@@ -1,0 +1,10 @@
+footer.meadowy {
+  font-size: 14px;
+  color: $shadow-green;
+  @media only screen and (max-width: $screen-xs-max) {
+    .text-right,
+    .text-center {
+      text-align: left;
+    }
+  }
+}
