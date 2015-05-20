@@ -98,6 +98,9 @@
                 <a href="atoms.html#description">Description</a>
               </li>
               <li>
+                <a href="atoms.html#figure">Figure</a>
+              </li>
+              <li>
                 <a href="atoms.html#heading">Heading</a>
               </li>
               <li>
@@ -141,6 +144,9 @@
               </li>
               <li>
                 <a href="atoms.html#partner">Partner</a>
+              </li>
+              <li>
+                <a href="atoms.html#separator">Separator</a>
               </li>
             </ul>
           </li>
@@ -222,6 +228,9 @@
             <a href="organisms.html" class="f-menu__heading">Organisms</a>
             <ul>
               <li>
+                <a href="organisms.html#featured-articles">Featured Articles</a>
+              </li>
+              <li>
                 <a href="organisms.html#footer">Footer</a>
               </li>
               <li>
@@ -232,6 +241,9 @@
               </li>
               <li>
                 <a href="organisms.html#navbar">Navbar</a>
+              </li>
+              <li>
+                <a href="organisms.html#partners">Partners</a>
               </li>
               <li>
                 <a href="organisms.html#sitemap">Sitemap</a>
@@ -270,6 +282,249 @@
 
     
 <h1 data-f-toggle="labels">Organisms</h1>
+
+
+<div class="f-item-group" id="featured-articles">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Featured Articles</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<h5>Usage : <code>{{&gt; featured-articles }}</code></h5>
+<h5>Options :</h5>
+<ul>
+<li><strong>featured-title</strong> - String</li>
+</ul>
+
+</div>
+<div class="f-item-preview">
+	<div class="sandy">
+  <div class="spacer spacer-sm"></div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-4">
+        <a href="#" class="thumbnail">
+          <div class="thumbnail-image relative-wrapper">
+
+            <div class="bottom-wrapper">
+              <h3>Omega European Master</h3>
+              <button class="icon-button   icon-button-plain ">
+                <span>Voir la galerie</span>
+                <i class="voticons voticons-camera"></i>
+              </button>
+            </div>
+
+            <div id="thumbnail-carousel-1" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <div class="absolute-wrapper gradient"></div>
+                  <img src="../build/img/vot-demo-05.jpg" class="img-responsive">
+                </div>
+                <div class="item">
+                  <div class="absolute-wrapper gradient"></div>
+                  <img src="../build/img/vot-demo-09.jpg" class="img-responsive">
+                </div>
+                <div class="item">
+                  <div class="absolute-wrapper gradient"></div>
+                  <img src="../build/img/vot-demo-14.jpg" class="img-responsive">
+                </div>
+                <div class="item">
+                  <div class="absolute-wrapper gradient"></div>
+                  <img src="https://unsplash.it/400/370/?random" class="img-responsive">
+                </div>
+              </div>
+              <button class="left carousel-control" href="#thumbnail-carousel-1" role="button" data-slide="prev">
+                <i class="voticons voticons-chevron-left" aria-hidden="true"></i>
+                <span class="sr-only">Previous</span>
+              </button>
+              <button class="right carousel-control" href="#thumbnail-carousel-1" role="button" data-slide="next">
+                <i class="voticons voticons-chevron-right" aria-hidden="true"></i>
+                <span class="sr-only">Next</span>
+              </button>
+            </div>
+
+
+          </div>
+          <div class="caption">
+            <p>
+              Matteo Manassero sera à Crans-Montana!
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a href="#" class="thumbnail">
+          <div class="thumbnail-image relative-wrapper">
+            <div class="absolute-wrapper gradient"></div>
+            <div class="bottom-wrapper">
+              <h3>Omega European Master</h3>
+              <button class="icon-button   icon-button-plain ">
+                <span>En savoir plus</span>
+                <i class="voticons voticons-pen"></i>
+              </button>
+            </div>
+
+            <img src="../build/img/vot-demo-14.jpg" class="img-responsive">
+
+
+          </div>
+          <div class="caption">
+            <p>
+              Tournoi saison 2015
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a href="#" class="thumbnail">
+          <div class="thumbnail-image relative-wrapper">
+            <div class="absolute-wrapper gradient"></div>
+            <div class="bottom-wrapper">
+              <h3>Montreux Jazz 2014</h3>
+              <button class="icon-button   icon-button-plain ">
+                <span>Voir la vidéo</span>
+                <i class="voticons voticons-video"></i>
+              </button>
+            </div>
+
+            <img src="../build/img/vot-demo-09.jpg" class="img-responsive">
+
+
+          </div>
+          <div class="caption">
+            <p>
+              Montreux Jazz Festival 2014 : Vidéo – Behind The Scenes
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="spacer spacer-sm"></div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;sandy&quot;&gt;
+  &lt;div class=&quot;spacer spacer-sm&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;container&quot;&gt;
+
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-4&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;thumbnail&quot;&gt;
+          &lt;div class=&quot;thumbnail-image relative-wrapper&quot;&gt;
+
+            &lt;div class=&quot;bottom-wrapper&quot;&gt;
+              &lt;h3&gt;Omega European Master&lt;/h3&gt;
+              &lt;button class=&quot;icon-button   icon-button-plain &quot;&gt;
+                &lt;span&gt;Voir la galerie&lt;/span&gt;
+                &lt;i class=&quot;voticons voticons-camera&quot;&gt;&lt;/i&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;div id=&quot;thumbnail-carousel-1&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;
+              &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;
+                &lt;div class=&quot;item active&quot;&gt;
+                  &lt;div class=&quot;absolute-wrapper gradient&quot;&gt;&lt;/div&gt;
+                  &lt;img src=&quot;../build/img/vot-demo-05.jpg&quot; class=&quot;img-responsive&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item&quot;&gt;
+                  &lt;div class=&quot;absolute-wrapper gradient&quot;&gt;&lt;/div&gt;
+                  &lt;img src=&quot;../build/img/vot-demo-09.jpg&quot; class=&quot;img-responsive&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item&quot;&gt;
+                  &lt;div class=&quot;absolute-wrapper gradient&quot;&gt;&lt;/div&gt;
+                  &lt;img src=&quot;../build/img/vot-demo-14.jpg&quot; class=&quot;img-responsive&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;item&quot;&gt;
+                  &lt;div class=&quot;absolute-wrapper gradient&quot;&gt;&lt;/div&gt;
+                  &lt;img src=&quot;https://unsplash.it/400/370/?random&quot; class=&quot;img-responsive&quot;&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;button class=&quot;left carousel-control&quot; href=&quot;#thumbnail-carousel-1&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;
+                &lt;i class=&quot;voticons voticons-chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+              &lt;/button&gt;
+              &lt;button class=&quot;right carousel-control&quot; href=&quot;#thumbnail-carousel-1&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;
+                &lt;i class=&quot;voticons voticons-chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+
+          &lt;/div&gt;
+          &lt;div class=&quot;caption&quot;&gt;
+            &lt;p&gt;
+              Matteo Manassero sera à Crans-Montana!
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-4&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;thumbnail&quot;&gt;
+          &lt;div class=&quot;thumbnail-image relative-wrapper&quot;&gt;
+            &lt;div class=&quot;absolute-wrapper gradient&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;bottom-wrapper&quot;&gt;
+              &lt;h3&gt;Omega European Master&lt;/h3&gt;
+              &lt;button class=&quot;icon-button   icon-button-plain &quot;&gt;
+                &lt;span&gt;En savoir plus&lt;/span&gt;
+                &lt;i class=&quot;voticons voticons-pen&quot;&gt;&lt;/i&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;img src=&quot;../build/img/vot-demo-14.jpg&quot; class=&quot;img-responsive&quot;&gt;
+
+
+          &lt;/div&gt;
+          &lt;div class=&quot;caption&quot;&gt;
+            &lt;p&gt;
+              Tournoi saison 2015
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-4&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;thumbnail&quot;&gt;
+          &lt;div class=&quot;thumbnail-image relative-wrapper&quot;&gt;
+            &lt;div class=&quot;absolute-wrapper gradient&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;bottom-wrapper&quot;&gt;
+              &lt;h3&gt;Montreux Jazz 2014&lt;/h3&gt;
+              &lt;button class=&quot;icon-button   icon-button-plain &quot;&gt;
+                &lt;span&gt;Voir la vidéo&lt;/span&gt;
+                &lt;i class=&quot;voticons voticons-video&quot;&gt;&lt;/i&gt;
+              &lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;img src=&quot;../build/img/vot-demo-09.jpg&quot; class=&quot;img-responsive&quot;&gt;
+
+
+          &lt;/div&gt;
+          &lt;div class=&quot;caption&quot;&gt;
+            &lt;p&gt;
+              Montreux Jazz Festival 2014 : Vidéo – Behind The Scenes
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spacer spacer-sm&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
 
 
 <div class="f-item-group" id="footer">
@@ -599,6 +854,172 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="f-item-group" id="partners">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Partners</h2>
+		<div class="f-item-controls">
+			
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div>
+<div class="f-item-preview">
+	<div class="sandy">
+  <div class="spacer spacer-sm"></div>
+  <div class="container">
+    <h4>Nos partenaires</h4>
+
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="partner">
+          <img src="../build/img/partner-demo.jpg" class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spacer spacer-sm"></div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;sandy&quot;&gt;
+  &lt;div class=&quot;spacer spacer-sm&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h4&gt;Nos partenaires&lt;/h4&gt;
+
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-2&quot;&gt;
+        &lt;div class=&quot;partner&quot;&gt;
+          &lt;img src=&quot;../build/img/partner-demo.jpg&quot; class=&quot;img-responsive&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spacer spacer-sm&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 
