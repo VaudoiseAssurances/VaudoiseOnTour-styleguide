@@ -1,0 +1,10 @@
+---
+notes: |
+  ##### Usage : `{{> thumbnail-cover }}`
+  ##### Options :
+  - **partner-logo** - String
+---
+
+<div class="partner">
+  <img src="{{#if partner-logo}}{{partner-logo}}{{^}}https://unsplash.it/104/104/?random{{/if}}" class="img-responsive">
+</div>
