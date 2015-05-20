@@ -1,0 +1,6 @@
+.separator {
+  margin: 20px 0;
+  border-color: $mercury;
+  &.separator-md {width: 50%;}
+  &.separator-sm {width: 30%;}
+}

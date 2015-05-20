@@ -9,10 +9,76 @@ cover: true
     <div class="row">
       {{> thumbnail-cover
             thumbnail-minimal=true
-            thumbnail-landscape=true }}
+            thumbnail-landscape=true
+            thumbnail-img="../build/img/vot-demo-11.jpg" }}
     </div>
   </div>
 </div>
+
+<div class="container">
+  {{> breadcrumb }}
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h1 class="h2">Une démarche concernée et engagée</h1>
+      <p>
+        <small class="text-uppercase"><span class="text-muted">publié le</span> 14.05.2015</small>
+      </p>
+
+      <div class="spacer spacer-sm"></div>
+
+      <p class="lead">
+        À la fin des années 1990, le cyclisme s’était technologiquement libéralisé, provoquant une surenchère que l’UCI finit par circonscrire avec la charte de Lugano, puis la limitation du poids minimum des bicyclettes de compétition à 6800 grammes, dès le 1er janvier 2000.
+      </p>
+      {{> separator separator-size="md" }}
+      <p>
+        Depuis, ça n’a pas changé et cela tombe bien, puisque cette masse de 6,8 kg correspond peu ou prou à la quantité de matière nécessaire à la construction d’un vélo complet, quantité en deçà de laquelle les ruptures structurelles feraient courir des risques aux coureurs. Et ils n’ont vraiment pas besoin de ça, ces athlètes phénoménaux qui sprintent à 70 km/h et dévalent les cols à plus de 110 km/h.
+      </p>
+      <p>
+        Les presque 150 coureurs du Tour de Romandie devront donc coltiner leur propre poids ajouté au 6800 grammes de leur vélo, à l’aide de leur seule puissance musculaire, pour triompher des trois cols de deuxième catégorie de cette deuxième étape Apples-Saint-Imier.
+      </p>
+
+      {{> figure
+            figure-img="../build/img/vot-demo-04.jpg"
+            figure-caption="Crédit Photo : M. Smith"
+            figure-alt="Angry cyclist" }}
+      
+      <p>
+        Pour tous ceux qui ne pourraient pas se rendre sur place, le site <a href="http://vaudoise-on-tour.ch">vaudoise-on-tour.ch</a> présente en vidéo les coulisses du Tour et des anecdotes originales du cyclisme avec Midi Gottet, membre du Trio Eden. Les visiteurs pourront participer en ligne au grand concours Vaudoise-on-Tour et remporter des prix exceptionnels! Le Tour de Suisse se suit également chaque jour sur les pages Facebook et Twitter de la Vaudoise.
+      </p>
+      {{> separator separator-size="sm" }}
+
+      <p class="text-uppercase">Partager l’article</p>
+
+      {{> link-button modifiers="btn-facebook text-uppercase" label="Facebook" }}
+      {{> link-button modifiers="btn-twitter text-uppercase" label="Twitter" }}
+
+      <div class="spacer"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    {{> thumbnail-cover
+          thumbnail-landscape=true
+          thumbnail-voticon="bike"
+          thumbnail-title="Dans le monde des petits pronostics"
+          thumbnail-subtitle="25 mars 2015"
+          thumbnail-img="../build/img/vot-demo-15.jpg"
+          thumbnail-url="http://google.com"
+          button-label="Lire l'article"
+          button-voticon="pen"
+          button-outlined=true
+          button-large=true }}
+  </div>
+</div>
+
+{{> featured-articles featured-title="Ces articles pourraient aussi vous plaire…" }}
+
+<div class="container">
+  {{> social-row }}
+</div>
+
+{{> partners }}
 
 {{> sitemap }}
 {{> footer }}

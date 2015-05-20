@@ -1,4 +1,30 @@
 .btn {
   border-radius: 900px;
   padding: 7px 30px;
+  transition: background 0.3s;
+}
+
+.btn-facebook {
+  color: $white;
+  background: #3b5998;
+  &:hover, &:focus, &:active {
+    color: $white;
+    background: darken(#3b5998, 10%);
+  }
+}
+.btn-twitter{
+  color: $white;
+  background: #00aced;
+  &:hover, &:focus, &:active {
+    color: $white;
+    background: darken(#00aced, 10%);
+  }
+}
+.btn-youtube {
+  color: $white;
+  background: #bb0000;
+  &:hover, &:focus, &:active {
+    color: $white;
+    background: darken(#bb0000, 10%);
+  }
 }

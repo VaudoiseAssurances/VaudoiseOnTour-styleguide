@@ -1,0 +1,13 @@
+---
+notes: |
+  ##### Usage : `{{> figure }}`
+  ##### Options :
+  - **figure-img** - String
+  - **figure-alt** - String
+  - **figure-caption** - String
+---
+
+<figure>
+  <figcaption>{{#if figure-caption}}{{figure-caption}}{{^}}Caption content{{/if}}</figcaption>
+  <img src="{{#if figure-img}}{{figure-img}}{{^}}https://unsplash.it/800/450/?random{{/if}}" alt="{{#if figure-caption}}{{figure-caption}}{{^}}image description{{/if}}" class="img-responsive">
+</figure>
