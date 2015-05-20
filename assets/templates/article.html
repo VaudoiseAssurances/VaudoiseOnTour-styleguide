@@ -4,16 +4,10 @@ cover: true
 
 {{> header }}
 
-<div class="sandy">
-  <div class="container">
-    <div class="row">
-      {{> thumbnail-cover
-            thumbnail-minimal=true
-            thumbnail-landscape=true
-            thumbnail-img="../build/img/vot-demo-11.jpg" }}
-    </div>
-  </div>
-</div>
+{{> thumbnail-cover
+      thumbnail-minimal=true
+      thumbnail-landscape=true
+      thumbnail-img="../build/img/vot-demo-11.jpg" }}
 
 <div class="container">
   {{> breadcrumb }}
@@ -60,23 +54,17 @@ cover: true
 
 
 
-<div class="alabasty">
-  <div class="container">
-    <div class="row">
-      {{> thumbnail-cover
-            thumbnail-landscape=true
-            thumbnail-voticon="bike"
-            thumbnail-title="Dans le monde des petits pronostics"
-            thumbnail-subtitle="25 mars 2015"
-            thumbnail-img="../build/img/vot-demo-15.jpg"
-            thumbnail-url="http://google.com"
-            button-label="Lire l'article"
-            button-voticon="pen"
-            button-outlined=true
-            button-large=true }}
-    </div>
-  </div>
-</div>
+{{> thumbnail-cover
+      thumbnail-landscape=true
+      thumbnail-voticon="bike"
+      thumbnail-title="Dans le monde des petits pronostics"
+      thumbnail-subtitle="25 mars 2015"
+      thumbnail-img="../build/img/vot-demo-15.jpg"
+      thumbnail-url="http://google.com"
+      button-label="Lire l'article"
+      button-voticon="pen"
+      button-outlined=true
+      button-large=true }}
 
 {{> featured-articles featured-title="Ces articles pourraient aussi vous plaire…" }}
 
