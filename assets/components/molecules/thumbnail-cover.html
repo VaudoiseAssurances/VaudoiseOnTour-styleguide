@@ -2,17 +2,26 @@
 notes: |
   ##### Usage : `{{> thumbnail-cover }}`
   ##### Options :
+  **Format**
   - **thumbnail-large** - boolean
+  - **thumbnail-landscape** - boolean
   - **thumbnail-medium** - boolean
+
+  **State**
+  - **thumbnail-minimal** - boolean
+
+  **Content**
   - **thumbnail-voticon** - String
   - **thumbnail-title** - String
   - **thumbnail-subtitle** - String
   - **thumbnail-img** - String
 ---
 
-<div class="thumbnail-cover {{#if thumbnail-large}}thumbnail-cover-lg{{/if}} {{#if thumbnail-medium}}thumbnail-cover-md{{/if}}">
-  <a href="{{#if thumbnail-url}}{{thumbnail-url}}{{^}}#{{/if}}">
+<div class="thumbnail-cover{{#if thumbnail-large}} thumbnail-cover-lg{{/if}}{{#if thumbnail-landscape}} thumbnail-cover-landscape{{/if}}{{#if thumbnail-medium}} thumbnail-cover-md{{/if}}">
+  {{#if thumbnail-minimal}}{{^}}<a href="{{#if thumbnail-url}}{{thumbnail-url}}{{^}}#{{/if}}">{{/if}}
     <div class="absolute-wrapper gradient"></div>
+
+    {{#if thumbnail-minimal}}{{^}}
     <div class="bottom-wrapper">
       <div class="{{#if thumbnail-large}}container{{^}}container-fluid{{/if}}">
         <div class="row">
@@ -34,12 +43,14 @@ notes: |
         <div class="spacer spacer-sm"></div>
       </div>
     </div>
+    {{/if}}
+
     <div class="focuspoint"
       data-focus-x="0"
       data-focus-y="-0"
-      data-image-w="{{#if thumbnail-large}}{{ medias.formats.thumbnails.large.width }}{{/if}}{{#if thumbnail-medium}}{{ medias.formats.thumbnails.medium.width }}{{/if}}"
-      data-image-h="{{#if thumbnail-large}}{{ medias.formats.thumbnails.large.height }}{{/if}}{{#if thumbnail-medium}}{{ medias.formats.thumbnails.medium.height }}{{/if}}">
+      data-image-w="{{#if thumbnail-large}}{{ medias.formats.thumbnails.large.width }}{{/if}}{{#if thumbnail-landscape}}{{ medias.formats.thumbnails.landscape.width }}{{/if}}{{#if thumbnail-medium}}{{ medias.formats.thumbnails.medium.width }}{{/if}}"
+      data-image-h="{{#if thumbnail-large}}{{ medias.formats.thumbnails.large.height }}{{/if}}{{#if thumbnail-landscape}}{{ medias.formats.thumbnails.landscape.height }}{{/if}}{{#if thumbnail-medium}}{{ medias.formats.thumbnails.medium.height }}{{/if}}">
       <img src="{{#if thumbnail-img}}{{thumbnail-img}}{{^}}https://unsplash.it/1920/550/?random{{/if}}" />
     </div>
-  </a>
+  {{#if thumbnail-minimal}}{{^}}</a>{{/if}}
 </div>

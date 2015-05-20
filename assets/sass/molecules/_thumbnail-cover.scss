@@ -1,13 +1,20 @@
 .thumbnail-cover {
   position: relative;
   background: $jewel;
+  .focuspoint {height: 200px;}
   &.thumbnail-cover-lg .focuspoint {height: 550px;}
+  &.thumbnail-cover-landscape .focuspoint {height: 350px;}
   &.thumbnail-cover-md .focuspoint {height: 400px;}
   .gradient {
     background: $jewel;
     background: linear-gradient(to bottom,  $jewel 0%,$gradient-transparent 45%,$gradient-transparent 55%,$jewel 100%);
     transition: opacity 0.3s;
     opacity: 0.65;
+  }
+  &.thumbnail-cover-landscape .gradient {
+    background: $jewel;
+    background: linear-gradient(to bottom,  $jewel 0%,$gradient-transparent 55%);
+    transition: opacity 0.3s;
   }
   a:hover {
     .gradient {opacity: 0.85;}

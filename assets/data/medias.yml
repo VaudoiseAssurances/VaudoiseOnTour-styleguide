@@ -3,6 +3,9 @@ formats:
     large:
       width: 1920
       height: 550
+    landscape:
+      width: 1920
+      height: 350
     medium:
       width: 740
       height: 400
