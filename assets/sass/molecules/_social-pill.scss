@@ -15,6 +15,10 @@
   background: $salem-transparent;
   padding: 15px 30px 20px 30px;
   border-radius: 60px;
+  .header-oncover & {
+    border-radius: 60px 0 0 60px;
+    right: 0;
+  }
   @media only screen and (max-width: 1500px) {
     border-radius: 60px 0 0 60px;
     right: 0;

@@ -4,5 +4,13 @@ notes: |
 ---
 <header class="{{#if cover}}header-oncover{{else}}salemy{{/if}}">
   {{> navbar }}
-  {{> social-pill }}
+  {{#if cover}}
+  <div class="container">
+    <div class="row">
+  {{/if}}
+    {{> social-pill }}
+  {{#if cover}}
+    </div>
+  </div>
+  {{/if}}
 </header>
