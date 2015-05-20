@@ -1,0 +1,102 @@
+{
+  "ontour": {
+    "culture": [
+      {
+        "name": "Musique & culture",
+        "url": "#"
+      },
+      {
+        "name": "Montreux Jazz Festival",
+        "url": "#"
+      },
+      {
+        "name": "Lucernes Blues",
+        "url": "#"
+      },
+      {
+        "name": "Solothurn Classics",
+        "url": "#"
+      },
+      {
+        "name": "Blues ‘n’ jazz Rapperswill",
+        "url": "#"
+      },
+      {
+        "name": "Opéra de Lausanne",
+        "url": "#"
+      },
+      {
+        "name": "Théâtre équilibre-Nuithonie",
+        "url": "#"
+      },
+      {
+        "name": "Sion Festival",
+        "url": "#"
+      }
+    ],
+    "sports": {
+      "golf": [
+        {
+          "name": "Omega European Masters",
+          "url": "#"
+        }
+      ],
+      "cyclisme": [
+        {
+          "name": "Tour de Romandie",
+          "url": "#"
+        },
+        {
+          "name": "Tour de Suisse",
+          "url": "#"
+        },
+        {
+          "name": "Swiss Cycling",
+          "url": "#"
+        }
+      ],
+      "athletisme": [
+        {
+          "name": "20KM Lausanne",
+          "url": "#"
+        },
+        {
+          "name": "Weltklasse Zürich",
+          "url": "#"
+        },
+        {
+          "name": "Athletissima",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  "concours": [
+    {
+      "name": "Concours A",
+      "url": "#"
+    },
+    {
+      "name": "Concours B",
+      "url": "#"
+    }
+  ],
+  "contact": [
+    {
+      "name": "Vaudoise Assurances",
+      "url": "#"
+    },
+    {
+      "name": "click2drive.ch - L’assurance auto en ligne",
+      "url": "#"
+    },
+    {
+      "name": "click2drive.ch - L’assurance moto en ligne",
+      "url": "#"
+    },
+    {
+      "name": "vaudoiseontour.ch",
+      "url": "#"
+    }
+  ]
+}

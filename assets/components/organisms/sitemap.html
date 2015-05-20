@@ -1,0 +1,63 @@
+<div class="salemy">
+  <div class="spacer spacer-sm"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <h5 class="heading-underlined">Accueil</h5>
+      </div>
+      <div class="col-sm-5">
+        <h5 class="heading-underlined">On Tour</h5>
+        <div class="row">
+          <div class="col-sm-6">
+            <h6 class="text-uppercase">Culture</h6>
+            <ul class="list-unstyled">
+              {{#each sitemaplinks.ontour.culture}}
+                <li><a href="{{ this.url }}">{{ this.name }}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="text-uppercase">Sports</h6>
+            <p>Golf</p>
+            <ul class="list-unstyled">
+              {{#each sitemaplinks.ontour.sports.golf}}
+                <li><a href="{{ this.url }}">{{ this.name }}</a></li>
+              {{/each}}
+            </ul>
+            <div class="spacer spacer-xs"></div>
+            <p>Cyclisme</p>
+            <ul class="list-unstyled">
+              {{#each sitemaplinks.ontour.sports.cyclisme}}
+                <li><a href="{{ this.url }}">{{ this.name }}</a></li>
+              {{/each}}
+            </ul>
+            <div class="spacer spacer-xs"></div>
+            <p>Athlétisme</p>
+            <ul class="list-unstyled">
+              {{#each sitemaplinks.ontour.sports.athletisme}}
+                <li><a href="{{ this.url }}">{{ this.name }}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <h5 class="heading-underlined">Concours</h5>
+        <ul class="list-unstyled">
+          {{#each sitemaplinks.concours}}
+            <li><a href="{{ this.url }}">{{ this.name }}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5 class="heading-underlined">Contact</h5>
+        <ul class="list-unstyled">
+          {{#each sitemaplinks.contact}}
+            <li><a href="{{ this.url }}">{{ this.name }}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="spacer spacer-sm"></div>
+</div>

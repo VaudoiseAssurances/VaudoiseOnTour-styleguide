@@ -10,3 +10,8 @@ h1, .h1 {
 .heading-light {
   font-weight: 100;
 }
+
+.heading-underlined {
+  border-bottom: 1px solid $shadow-green;
+  padding-bottom: 10px;
+}

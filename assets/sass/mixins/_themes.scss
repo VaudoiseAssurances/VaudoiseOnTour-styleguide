@@ -3,10 +3,16 @@
 }
 
 .meadowy {
+  color: $white;
+  a {color: $shadow-green;}
+  a:hover, a:active, a:focus {color: $white;}
   @include theme($mountain-meadow);
 }
 
 .salemy {
+  color: $white;
+  a {color: $shadow-green;}
+  a:hover, a:active, a:focus {color: $white;}
   @include theme($salem);
 }
 
