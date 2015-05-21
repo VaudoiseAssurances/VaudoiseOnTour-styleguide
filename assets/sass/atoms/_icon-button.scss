@@ -12,6 +12,11 @@
   border-radius: 100px;
   text-transform: uppercase;
 
+  .voticons {
+    position: relative;
+    z-index: 9999;
+  }
+
   &.icon-button-plain {
     background: $brand-primary;
     color: $white;
@@ -46,6 +51,17 @@
       border: 1px solid $white;
       border-right: none;
     }
+    &.icon-button-outlined-gray:after,
+    &.icon-button-outlined-gray .button-label-wrapper {
+      border-color: $gray !important;
+      transition: all 0.3;
+    }
+    &.icon-button-outlined-gray:hover:after,
+    &.icon-button-outlined-gray:hover .button-label-wrapper {
+      border-color: $mountain-meadow !important;
+      color: $mountain-meadow;
+    }
+    &.icon-button-outlined-gray:hover .voticons {color: $mountain-meadow !important;}
   }
   &.icon-button-lg {
     height: 65px;
@@ -88,7 +104,7 @@
     white-space: nowrap;
     position: absolute;
     text-align: right;
-    z-index: -1;
+    z-index: 9998;
     right: 27.5px;
     top: 0;
     border-radius: 100px 0 0 100px;
