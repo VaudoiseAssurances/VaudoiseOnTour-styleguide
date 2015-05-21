@@ -39,6 +39,11 @@
   background: $green-haze;
 }
 
+.navbar-default .navbar-nav.text-center > .active > a:active,
+.navbar-default .navbar-nav.text-center > li > a:active {
+  background: $jewel;
+}
+
 .navbar-brand {
   padding-right: 0;
   @media only screen and (max-width: $screen-sm-max) {
