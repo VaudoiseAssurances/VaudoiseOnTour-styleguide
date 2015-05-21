@@ -22,7 +22,7 @@
 
 
     
-<header class="salemy">
+<header class="header-oncover">
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="row">
@@ -43,8 +43,8 @@
           <ul class="nav navbar-nav text-center col-sm-7">
             <li><a href="homepage.html">Accueil</a></li>
             <li><a href="ontour.html">On tour</a></li>
-            <li><a href="concours.html">Concours</a></li>
-            <li class="active"><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="concours.html">Concours</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
   
           <ul class="nav navbar-nav navbar-right navbar-lang text-right col-sm-2">
@@ -63,6 +63,21 @@
       <a href="#" class="icon-circle icon-youtube"><i class="voticons voticons-youtube"></i></a>
     </div>
   </div></header>
+<div class="thumbnail-cover thumbnail-cover-landscape">
+  
+    <div class="absolute-wrapper gradient"></div>
+
+    
+    <div class="focuspoint"
+      data-focus-x="0"
+      data-focus-y="-0"
+      data-image-w="1920"
+      data-image-h="350">
+      <img src="../build/img/vot-demo-12.jpg" />
+    </div>
+  
+</div>
+
 
 <div class="container">
   <ol class="breadcrumb">
@@ -72,23 +87,96 @@
   </ol>
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <h1 class="h2 text-muted">Contact</h1>
-
-      <div class="well">
-        <strong>Véronique Oliveira</strong><br>
-        Responsable communication<br><br>
-
-        Tél : +41 21 618 86 95<br>
-        Fax : +41 21 618 83 80
-      </div>
+      <h1 class="h2 text-muted">Tour de Romandie: Concours Selfie du 1er avril au 3 mai</h1>
 
       <p>
-        Pour plus d’informations sur la Vaudoise Assurances, rendez-vous sur notre site principal <a href="http://www.vaudoise.ch/">Vaudoise assurance</a>.<br><br>
-
-        Découvrez nos produits :<br><br>
-        <a href="http://click2drive.ch">click2drive.ch</a> - L’assurance auto en ligne<br>
-        <a href="http://click2ride.ch">click2ride.ch</a> - L’assurance moto en ligne
+        Remplissez le questionnaire ci-dessous :
       </p>
+
+      <div class="well">
+        <form action="">
+          <div class="spacer spacer-xs"></div>
+          <label>1. Avez-vous déjà participé à un concours Vaudoise On Tour ?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q1" value="q1-option1">
+              oui
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q1" value="q1-option2" checked>
+              non
+            </label>
+          </div>
+          
+          <div class="spacer spacer-xs"></div>
+          <label>2. Qui était le vainqueur du Tour de Romandie 2011 ?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q2" value="q2-option1">
+              Jean Dupuis
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q2" value="q2-option2">
+              Christopher Froome
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q2" value="q2-option3">
+              Simon Pinot
+            </label>
+          </div>
+
+          <div class="spacer spacer-xs"></div>
+          <label>3. En quelle année Jean Dupuis fut vainqueur du Tour de Romandie ?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q3" value="q3-option1">
+              2011
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q3" value="q3-option2">
+              2013
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q3" value="q3-option3">
+              2015
+            </label>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="spacer spacer-sm"></div>
+
+              <div class="form-group">
+                <label for="name">Votre nom et prénom</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="email" class="text-danger">Votre Email</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Votre n° de téléphone</label>
+                <input type="text" class="form-control" id="phone">
+              </div>
+
+              <div class="spacer spacer-sm"></div>
+              <div class="form-group">
+                <input type="submit" class="form-control btn btn-primary btn-block text-uppercase" value="Participer au concours">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
 
       <div class="spacer"></div>
 
