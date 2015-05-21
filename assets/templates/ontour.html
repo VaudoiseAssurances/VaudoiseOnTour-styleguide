@@ -1,0 +1,102 @@
+---
+cover: true
+---
+
+{{> header }}
+
+{{> thumbnail-cover
+      thumbnail-minimal=true
+      thumbnail-landscape=true
+      thumbnail-img="../build/img/vot-demo-03.jpg" }}
+
+<div class="container">
+  {{> breadcrumb }}
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Événement</h1>
+      <p>
+        Vaudoise Assurances est active dans les domaines de la musique et de la culture, ainsi que dans celui du sports.
+      </p>
+      <p>
+        Consultez les manifestions où nous sommes présents :
+      </p>
+    </div>
+  </div>
+
+  <div class="spacer spacer-sm"></div>
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+      {{> link-button modifiers="btn-success text-uppercase" url="#musique" label="Musique & culture"  }}
+      {{> link-button modifiers="btn-success text-uppercase" label="Cyclisme" }}
+      {{> link-button modifiers="btn-success text-uppercase" label="Athlétisme" }}
+      {{> link-button modifiers="btn-success text-uppercase" label="Golf" }}
+    </div>
+  </div>
+
+  <div class="spacer spacer-sm"></div>
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h2 id="musique">Musique & culture</h2>
+      <p class="lead">
+        Du classique au jazz, du théâtre à l’opéra, la Vaudoise Assurances vous emmène en tournée à la rencontre des artistes d’hier, d’aujourd’hui et de demain.
+      </p>
+      {{> separator separator-size="md" }}
+      <p>
+        Le sponsoring fait partie intégrante de la stratégie de communication de la Vaudoise. Notre ancrage régional et local se traduit par un engagement actif au sein de la communauté. La Vaudoise participe activement à la vie économique, sportive et culturelle en soutenant diverses manifestations d'envergure nationale, cantonale ou régionale.
+      </p>
+      <div class="spacer spacer-sm"></div>
+      <div class="text-center">
+        <i class="voticons voticons-chevron-down voticons-lg text-muted"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="spacer spacer-sm"></div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        {{> thumbnail-cover
+              thumbnail-medium=true
+              thumbnail-voticon="music"
+              thumbnail-title="Montreux Jazz"
+              thumbnail-subtitle="25 Mars 2015"
+              thumbnail-img="../build/img/vot-demo-07.jpg"
+              button-label="En savoir plus"
+              button-voticon="chevron-right"
+              button-large=true
+              button-outlined=true }}
+      </div>
+  </div>
+    <div class="col-sm-6">
+      <div class="row">
+        {{> thumbnail-cover
+              thumbnail-medium=true
+              thumbnail-voticon="music"
+              thumbnail-title="Opéra de Lausanne"
+              thumbnail-subtitle="25 Mars 2015"
+              thumbnail-img="../build/img/vot-demo-06.jpg"
+              button-label="En savoir plus"
+              button-voticon="chevron-right"
+              button-large=true
+              button-outlined=true }}
+      </div>
+    </div>
+  </div>
+</div>
+{{> featured-music }}
+
+
+<div class="container">
+  {{> social-row }}
+</div>
+
+{{> partners }}
+
+{{> sitemap }}
+{{> footer }}

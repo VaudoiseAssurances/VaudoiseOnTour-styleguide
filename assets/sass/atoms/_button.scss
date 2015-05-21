@@ -10,6 +10,11 @@
   color: $mountain-meadow;
 }
 
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+  border-color: $salem;
+  color: $salem;
+}
+
 .btn-facebook {
   color: $white;
   background: #3b5998;

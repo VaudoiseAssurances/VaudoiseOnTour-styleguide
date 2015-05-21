@@ -1,0 +1,42 @@
+<div class="sandy">
+  <div class="spacer spacer-sm"></div>
+  <div class="container">
+    {{#if featured-title}}<h6>{{featured-title}}</h6>{{/if}}
+    <div class="row">
+      <div class="col-sm-4">
+        {{> thumbnail
+              thumbnail-title="Lucerne Blues"
+              thumbnail-text="Consultez la programmation de l’édition 2015"
+              thumbnail-img="../build/img/vot-demo-10.jpg"
+              button-label="En savoir plus"
+              button-voticon="chevron-right" }}
+        </div>
+      <div class="col-sm-4">
+        {{> thumbnail
+              thumbnail-title="Blues ‘n’ Jazz Rapperswill"
+              thumbnail-text="Festival de Blues ‘n’ Jazz Rapperswill 2015"
+              thumbnail-img="../build/img/vot-demo-19.jpg"
+              button-label="En savoir plus"
+              button-voticon="chevron-right" }}
+        </div>
+      <div class="col-sm-4">
+        {{> thumbnail
+              thumbnail-title="Théâtre Equilibre-Nuithonie"
+              thumbnail-text="Toutes les actualités et agendas du théâtre Equilibre-Nuithonie"
+              thumbnail-img="../build/img/vot-demo-22.jpg"
+              button-label="En savoir plus"
+              button-voticon="chevron-right" }}
+        </div>
+    </div>
+
+    <h4 class="text-muted">Ils pourraient aussi vous intéresser…</h4>
+
+    <ul class="text-primary">
+      <li><a href="#">Sion festival</a></li>
+      <li><a href="#">Solothurn Classics</a></li>
+    </ul>
+
+  </div>
+
+  <div class="spacer spacer-sm"></div>
+</div>
