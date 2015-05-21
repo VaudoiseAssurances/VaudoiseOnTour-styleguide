@@ -81,6 +81,7 @@
   }
   li:first-child a {
     border-radius: $navbar-height 0 0 $navbar-height;
+    border-right: none;
   }
   li.active a,
   li a:hover,
