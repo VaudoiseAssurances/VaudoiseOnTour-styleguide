@@ -1,5 +1,6 @@
 ---
 cover: true
+ontour: true
 ---
 
 {{> header }}
@@ -29,9 +30,9 @@ cover: true
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2 text-center">
       {{> link-button modifiers="btn-success text-uppercase" url="#musique" label="Musique & culture"  }}
-      {{> link-button modifiers="btn-success text-uppercase" label="Cyclisme" }}
-      {{> link-button modifiers="btn-success text-uppercase" label="Athlétisme" }}
-      {{> link-button modifiers="btn-success text-uppercase" label="Golf" }}
+      {{> link-button modifiers="btn-success text-uppercase" url="#cyclism" label="Cyclisme" }}
+      {{> link-button modifiers="btn-success text-uppercase" url="#athletism" label="Athlétisme" }}
+      {{> link-button modifiers="btn-success text-uppercase" url="#golf" label="Golf" }}
     </div>
   </div>
 
@@ -98,7 +99,7 @@ cover: true
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
       <h2 id="musique">Sports</h2>
-      <h3 class="text-muted">Cyclisme</h3>
+      <h3 id="cyclism" class="text-muted">Cyclisme</h3>
       <p class="lead">
         De retour avec le trio gagnant des manifestations cyclistes, la Vaudoise met les bouchées doubles pour offrir encore plus d’émotions aux amateurs de la petite reine!
       </p>
@@ -119,7 +120,7 @@ cover: true
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <h3 class="text-muted">Athlétisme</h3>
+      <h3 id="athletism" class="text-muted">Athlétisme</h3>
       <p class="lead">
         La Vaudoise Assurances s'engage dans l'athlétisme pour le plus grand bonheur des romands et suisse allemands supporters de sports de compétition.
       </p>
@@ -140,7 +141,7 @@ cover: true
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <h3 class="text-muted">Golf</h3>
+      <h3 id="golf" class="text-muted">Golf</h3>
       <p class="lead">
         La Vaudoise Assurances renforce son engagement dans le golf.
       </p>

@@ -16,10 +16,10 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav text-center col-sm-7">
-          <li class="active"><a href="#">Accueil</a></li>
-          <li><a href="#">On tour</a></li>
-          <li><a href="#">Concours</a></li>
-          <li><a href="#">Contact</a></li>
+          <li{{#if homepage}} class="active"{{/if}}><a href="homepage.html">Accueil</a></li>
+          <li{{#if ontour}} class="active"{{/if}}><a href="ontour.html">On tour</a></li>
+          <li{{#if concours}} class="active"{{/if}}><a href="concours.html">Concours</a></li>
+          <li{{#if contact}} class="active"{{/if}}><a href="contact.html">Contact</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right navbar-lang text-right col-sm-2">
