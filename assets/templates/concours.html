@@ -1,0 +1,125 @@
+---
+cover: true
+---
+
+{{> header }}
+
+{{> thumbnail-cover
+      thumbnail-minimal=true
+      thumbnail-landscape=true
+      thumbnail-img="../build/img/vot-demo-12.jpg" }}
+
+
+
+<div class="container">
+  {{> breadcrumb }}
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1 class="h2 text-muted">Tour de Romandie: Concours Selfie du 1er avril au 3 mai</h1>
+
+      <p>
+        Remplissez le questionnaire ci-dessous :
+      </p>
+
+      <div class="well">
+        <form action="">
+          <div class="spacer spacer-xs"></div>
+          <label>1. Avez-vous déjà participé à un concours Vaudoise On Tour ?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q1" value="q1-option1">
+              oui
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q1" value="q1-option2" checked>
+              non
+            </label>
+          </div>
+          
+          <div class="spacer spacer-xs"></div>
+          <label>2. Qui était le vainqueur du Tour de Romandie 2011 ?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q2" value="q2-option1">
+              Jean Dupuis
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q2" value="q2-option2">
+              Christopher Froome
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q2" value="q2-option3">
+              Simon Pinot
+            </label>
+          </div>
+
+          <div class="spacer spacer-xs"></div>
+          <label>3. En quelle année Jean Dupuis fut vainqueur du Tour de Romandie ?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q3" value="q3-option1">
+              2011
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q3" value="q3-option2">
+              2013
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q3" value="q3-option3">
+              2015
+            </label>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="spacer spacer-sm"></div>
+
+              <div class="form-group">
+                <label for="name">Votre nom et prénom</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="email" class="text-danger">Votre Email</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Votre n° de téléphone</label>
+                <input type="text" class="form-control" id="phone">
+              </div>
+
+              <div class="spacer spacer-sm"></div>
+              <div class="form-group">
+                <input type="submit" class="form-control btn btn-primary btn-block text-uppercase" value="Participer au concours">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="spacer"></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="alabasty">
+  <div class="container">
+    {{> social-row }}
+  </div>
+</div>
+
+{{> partners }}
+
+{{> sitemap }}
+{{> footer }}
