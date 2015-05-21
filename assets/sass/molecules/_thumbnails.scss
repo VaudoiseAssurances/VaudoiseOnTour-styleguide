@@ -30,11 +30,16 @@
 
   .caption {
     padding: 40px 30px 20px 30px;
+    min-height: 130px;
   }
 
   .carousel-control {
     background: none;
     border: none;
     z-index: 9999;
+  }
+
+  h1, .h1, h2, .h2, h3, .h3 {
+    margin: 0.2em 0;
   }
 }
