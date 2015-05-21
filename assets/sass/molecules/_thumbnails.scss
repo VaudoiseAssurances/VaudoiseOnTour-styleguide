@@ -25,7 +25,6 @@
     position: absolute;
     right: 30px;
     bottom: -22.5px;
-    z-index: 1000;
   }
 
   .caption {
@@ -36,7 +35,12 @@
   .carousel-control {
     background: none;
     border: none;
-    z-index: 9999;
+    z-index: 999;
+  }
+
+  .carousel {
+    position: relative;
+    z-index: 0;
   }
 
   h1, .h1, h2, .h2, h3, .h3 {
