@@ -6,8 +6,8 @@
       var $that = $(this),
           widthAuto = $that.find('.button-label').width();
 
-      $that.find('.button-label-wrapper').animate({width: widthAuto + 50}, 150);
-      $that.find('.button-label').animate({opacity: 1}, 300);
+      $that.find('.button-label-wrapper').animate({width: widthAuto + 50}, 200);
+      $that.find('.button-label').animate({opacity: 1}, 400);
     });
 
     $('.icon-button').mouseleave(function(){
@@ -15,7 +15,7 @@
           halfDisc = $(this).width() / 2;
 
       $that.find('.button-label').animate({opacity: 0}, 150, function(){
-        $that.find('.button-label-wrapper').animate({width: halfDisc}, 150);
+        $that.find('.button-label-wrapper').animate({width: halfDisc}, 300);
       });
     });
 
@@ -24,7 +24,7 @@
           halfDisc = $(this).find('.icon-button').width() / 2;
 
       $that.find('.button-label').animate({opacity: 0}, 150, function(){
-        $that.find('.button-label-wrapper').animate({width: halfDisc}, 150);
+        $that.find('.button-label-wrapper').animate({width: halfDisc}, 300);
       });
     });
   });

@@ -8,13 +8,13 @@
   .gradient {
     background: $jewel;
     background: linear-gradient(to bottom,  $jewel 0%,$gradient-transparent 45%,$gradient-transparent 55%,$jewel 100%);
-    transition: opacity 0.3s;
+    transition: opacity 1.5s;
     opacity: 0.65;
   }
   &.thumbnail-cover-landscape .gradient {
     background: $jewel;
     background: linear-gradient(to bottom,  $jewel 0%,$gradient-transparent 55%);
-    transition: opacity 0.3s;
+    transition: opacity 1.5s;
   }
   a:hover {
     .gradient {opacity: 0.85;}
@@ -22,7 +22,7 @@
   }
   img {
     transform: scale(1);
-    transition: all 0.3s;
+    transition: all 1.5s;
   }
   a {
     color: $white;
