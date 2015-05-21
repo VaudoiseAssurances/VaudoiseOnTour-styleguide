@@ -13,12 +13,20 @@ notes: |
 
 {{#if button-link}}
 <a href="{{#if button-url}}{{button-url}}{{^}}#{{/if}}" class="icon-button{{#if button-large}} icon-button-lg{{/if}}{{#if button-small}} icon-button-sm{{/if}}{{#if button-plain}} icon-button-plain{{/if}}{{#if button-outlined}} icon-button-outlined{{/if}}">
-  <span>{{#if button-label}}{{button-label}}{{^}}label{{/if}}</span>
+  <span class="button-label-wrapper">
+    <span class="button-label">
+      {{#if button-label}}{{button-label}}{{^}}label{{/if}}
+    </span>
+  </span>
   <i class="voticons voticons-{{#if button-voticon}}{{button-voticon}}{{^}}heart{{/if}}"></i>
 </a>
 {{^}}
 <button class="icon-button {{#if button-large}}icon-button-lg{{/if}} {{#if button-small}}icon-button-sm{{/if}} {{#if button-plain}}icon-button-plain{{/if}} {{#if button-outlined}}icon-button-outlined{{/if}}">
-  <span>{{#if button-label}}{{button-label}}{{^}}label{{/if}}</span>
+  <span class="button-label-wrapper">
+    <span class="button-label">
+      {{#if button-label}}{{button-label}}{{^}}label{{/if}}
+    </span>
+  </span>
   <i class="voticons voticons-{{#if button-voticon}}{{button-voticon}}{{^}}heart{{/if}}"></i>
 </button>
 {{/if}}

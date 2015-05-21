@@ -1,43 +1,106 @@
 .icon-button {
   display: inline-block;
-  width: auto;
+  position: relative;
+  width: 55px;
   height: 55px;
-  padding: 0 15px;
+  padding: 0;
   background: none;
   box-sizing: border-box;
   text-align: center;
   line-height: 57px;
   border: none;
   border-radius: 100px;
+  text-transform: uppercase;
 
   &.icon-button-plain {
     background: $brand-primary;
     color: $white;
     transition: background 0.3s;
+    .button-label-wrapper {
+      background: $brand-primary;
+    }
   }
   &.icon-button-outlined {
-    border: 1px solid $white;
+    &:after {
+      content: '\00a0';
+      display: block;
+      width: 27.5px;
+      height: 55px;
+      border: 1px solid $white;
+      border-left: none;
+      border-radius: 0 100px 100px 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &.icon-button-lg:after {
+      width: 32.5px;
+      height: 65px;
+      top: -1px;
+    }
+    &.icon-button-sm:after {
+      width: 22.5px;
+      height: 45px;
+    }
+    .button-label-wrapper {
+      border: 1px solid $white;
+      border-right: none;
+    }
   }
   &.icon-button-lg {
     height: 65px;
-    line-height: 60px;
+    width: 65px;
+    line-height: 69px;
     font-size: 1.2em;
     .voticons {font-size: 1.2em;}
+    .button-label-wrapper {
+      height: 65px;
+      right: 32.5px;
+      width: 32.5px;
+      top: -1px;
+    }
+    .button-label {
+      padding-right: 32.5px;
+    }
   }
   &.icon-button-sm {
     height: 45px;
+    width: 45px;
     line-height: 47px;
     font-size: 0.8em;
     .voticons {font-size: 0.8em;}
+    .button-label-wrapper {
+      height: 45px;
+      right: 22.5px;
+      width: 22.5px;
+    }
+    .button-label {
+      padding-right: 22.5px;
+    }
   }
 
-  span {
-    padding-right: 10px;
+  .button-label-wrapper {
+    display: inline-block;
+    width: 27.5px;
+    height: 55px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    text-align: right;
+    z-index: -1;
+    right: 27.5px;
+    top: 0;
+    border-radius: 100px 0 0 100px;
+  }
+
+  .button-label {
+    padding-right: 27.5px;
+    opacity: 0;
   }
 
   &:hover {
     text-decoration: none;
-    &.icon-button-plain {background: $salem;}
   }
 
 }
