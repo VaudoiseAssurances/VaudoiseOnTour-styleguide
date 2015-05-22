@@ -21,6 +21,9 @@
     .gradient {opacity: 0.85;}
     .focuspoint {transform: scale(1.05);}
   }
+  [class*="col-"] {
+    padding: 0 40px;
+  }
   .focuspoint {
     transform: scale(1);
     transition: all 1.5s;
