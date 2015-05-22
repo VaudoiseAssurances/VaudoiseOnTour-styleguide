@@ -1,6 +1,7 @@
 .thumbnail-cover {
   position: relative;
   background: $jewel;
+  overflow: hidden;
   .focuspoint {height: 200px;}
   &.thumbnail-cover-lg .focuspoint {height: 550px;}
   &.thumbnail-cover-landscape .focuspoint {height: 350px;}
@@ -18,9 +19,9 @@
   }
   a:hover {
     .gradient {opacity: 0.85;}
-    img {transform: scale(1.05);}
+    .focuspoint {transform: scale(1.05);}
   }
-  img {
+  .focuspoint {
     transform: scale(1);
     transition: all 1.5s;
   }
