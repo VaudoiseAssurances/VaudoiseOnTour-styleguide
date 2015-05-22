@@ -23,7 +23,8 @@ notes: |
 
     {{#if thumbnail-minimal}}{{^}}
     <div class="bottom-wrapper">
-      <div class="{{#if thumbnail-large}}container relative-wrapper{{^}}container-fluid{{/if}}">
+      {{#if thumbnail-landscape}}{{^}}<div class="{{#if thumbnail-large}}container relative-wrapper{{^}}container-fluid{{/if}}">{{/if}}
+      {{#if thumbnail-large}}{{^}}<div class="{{#if thumbnail-landscape}}container relative-wrapper{{^}}container-fluid{{/if}}">{{/if}}
         <div class="row">
           <div class="col-sm-8">
             <i class="voticons voticons-{{#if thumbnail-voticon}}{{thumbnail-voticon}}{{^}}heart{{/if}} voticons-lg"></i>
