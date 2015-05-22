@@ -19,16 +19,19 @@ a.icon-circle {
 }
 
 .icon-facebook:hover, .icon-circle-lg.icon-facebook:hover {
-  color: lighten(#3b5998, 55%);
   border-color: #3b5998;
+  color: $white;
+  background: lighten(#3b5998, 0%);
 }
 .icon-twitter:hover, .icon-circle-lg.icon-twitter:hover {
-  color: lighten(#00aced, 55%);
   border-color: #00aced;
+  color: $white;
+  background: lighten(#00aced, 0%);
 }
 .icon-youtube:hover, .icon-circle-lg.icon-youtube:hover {
-  color: lighten(#bb0000, 55%);
   border-color: #bb0000;
+  color: $white;
+  background: lighten(#bb0000, 0%);
 }
 
 .icon-heart {
