@@ -4,7 +4,6 @@
   padding: 0;
 
   .gradient {
-    background: $jewel;
     background: linear-gradient(to bottom, $gradient-transparent 45%,$jewel 100%);
     transition: opacity 0.3s;
     opacity: 0.65;

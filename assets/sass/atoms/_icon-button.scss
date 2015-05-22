@@ -118,5 +118,6 @@
   &:hover {
     text-decoration: none;
   }
-
 }
+
+.lt-ie9 .icon-button .button-label {display: none;}
