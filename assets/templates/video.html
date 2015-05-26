@@ -1,0 +1,68 @@
+---
+cover: true
+article: true
+---
+
+{{> header }}
+
+{{> thumbnail-cover
+      thumbnail-minimal=true
+      thumbnail-landscape=true
+      thumbnail-img="../build/img/vot-demo-11.jpg" }}
+
+<div class="container">
+  {{> breadcrumb }}
+
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <h1 class="h2">Montreux Jazz Festival 2014 - Behind The Scenes 5</h1>
+      <p>
+        <small class="text-uppercase"><span class="text-muted">publié le</span> 21.07.2014</small>
+      </p>
+
+      <div class="spacer spacer-sm"></div>
+
+      <p>
+        Description if there is one...
+      </p>
+
+      {{> separator separator-size="md" }}
+      
+      {{> video }}
+
+      {{> separator separator-size="sm" }}
+
+      <h6 class="text-uppercase">Partager la vidéo</h6>
+
+      {{> link-button modifiers="btn-facebook text-uppercase" label="Facebook" }}
+      {{> link-button modifiers="btn-twitter text-uppercase" label="Twitter" }}
+
+      <div class="spacer"></div>
+    </div>
+  </div>
+</div>
+
+
+
+{{> thumbnail-cover
+      thumbnail-landscape=true
+      thumbnail-voticon="bike"
+      thumbnail-title="Dans le monde des petits pronostics"
+      thumbnail-subtitle="25 mars 2015"
+      thumbnail-img="../build/img/vot-demo-15.jpg"
+      thumbnail-url="http://google.com"
+      button-label="Lire l'article"
+      button-voticon="pen"
+      button-outlined=true
+      button-large=true }}
+
+{{> featured-articles featured-title="Ces articles pourraient aussi vous plaire…" }}
+
+<div class="container">
+  {{> social-row }}
+</div>
+
+{{> partners }}
+
+{{> sitemap }}
+{{> footer }}
