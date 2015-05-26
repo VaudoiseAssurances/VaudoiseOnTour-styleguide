@@ -11,7 +11,7 @@ header {
 
 .header-oncover {
   position: absolute;
-  z-index: 9999999;
+  z-index: 1000;
   width: 100%;
   @media only screen and (max-width: $screen-xs-max) {
     background: $salem;

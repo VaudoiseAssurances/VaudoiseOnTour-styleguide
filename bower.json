@@ -6,6 +6,7 @@
     "bootstrap-sass": "~3.3.4",
     "jquery": "~2.1.1",
     "fabricator": "git@github.com:fbrctr/fabricator.git",
-    "jquery-focuspoint": "~1.1.1"
+    "jquery-focuspoint": "~1.1.1",
+    "photoswipe": "~4.0.8"
   }
 }
