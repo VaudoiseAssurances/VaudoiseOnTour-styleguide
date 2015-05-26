@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(gulp, $, config) {
+module.exports = function(gulp, $, config, argv) {
 
  /*
   * CSS Vendors
@@ -10,7 +10,10 @@ module.exports = function(gulp, $, config) {
       .pipe($.concat('vendors.min.css'))
       .pipe($.minifyCss())
       .pipe($.size({title: 'CSS VENDORS', showFiles: true}))
-      .pipe(gulp.dest(config.build + 'css'));
+      .pipe($.if(argv.integration,
+        gulp.dest(config.integration + 'StylesSheet/Vendors'),
+        gulp.dest(config.build + 'css'))
+      );
   });
 
  /*
@@ -21,7 +24,10 @@ module.exports = function(gulp, $, config) {
       .pipe($.concat('vendors.min.js'))
       .pipe($.uglify())
       .pipe($.size({title: 'JS VENDORS', showFiles: true}))
-      .pipe(gulp.dest(config.build + 'js'));
+      .pipe($.if(argv.integration,
+        gulp.dest(config.integration + 'JavaScript'),
+        gulp.dest(config.build + 'js'))
+      );
   });
 
  /*
@@ -30,7 +36,10 @@ module.exports = function(gulp, $, config) {
   gulp.task('fonts-vendors', function() {
     return gulp.src(config.vendors.fonts)
       .pipe($.size({title: 'FONTS'}))
-      .pipe(gulp.dest(config.build + 'fonts'));
+      .pipe($.if(argv.integration,
+        gulp.dest(config.integration + 'fonts'),
+        gulp.dest(config.build + 'fonts'))
+      );
   });
 
  /*
@@ -41,7 +50,10 @@ module.exports = function(gulp, $, config) {
       .pipe($.concat('polyfills.min.js'))
       .pipe($.uglify())
       .pipe($.size({title: 'POLYFILLS', showFiles: true}))
-      .pipe(gulp.dest(config.build + 'js'));
+      .pipe($.if(argv.integration,
+        gulp.dest(config.integration + 'JavaScript'),
+        gulp.dest(config.build + 'js'))
+      );
   });
 
   /*

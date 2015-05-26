@@ -29,10 +29,15 @@ module.exports = function(gulp, $, config, argv, slug) {
         })
       ]))
       .pipe($.if(!argv.production, $.sourcemaps.write()))
-      .pipe($.if(argv.production, $.minifyCss()))
       .pipe($.concat('main.css'))
       .pipe($.size({title: 'STYLES', showFiles: true}))
-      .pipe(gulp.dest(config.build + '/css'));
+      .pipe($.if(argv.production, $.minifyCss()))
+      .pipe($.if(argv.production, $.rename({suffix: '.min'})))
+      // use --production --integration to deploy assets in Public directory
+      .pipe($.if(argv.integration,
+        gulp.dest(config.integration + '/StylesSheet'),
+        gulp.dest(config.build + '/css'))
+      );
   });
 
 };

@@ -38,6 +38,7 @@
   "assets": "assets/",
   "iconsFontName": "voticons",
   "build": "build/",
+  "integration": "../../Public/",
   "browsers": ["last 2 versions", "safari 5", "ie 8", "ie 9", "ff 27", "opera 12.1"],
   "styleguide": {
     "assets": "bower_components/fabricator/src/assets/fabricator/",
