@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(gulp, $, config, slug) {
+module.exports = function(gulp, $, config, argv, slug) {
 
   var name = slug(config.iconsFontName).toLowerCase();
 
@@ -26,7 +26,10 @@ module.exports = function(gulp, $, config, slug) {
           .pipe($.rename(name + '.scss'))
           .pipe(gulp.dest(config.assets + 'sass/'));
       })
-      .pipe(gulp.dest(config.build + 'fonts'));
+      .pipe($.if(argv.integration,
+        gulp.dest(config.integration + 'fonts'),
+        gulp.dest(config.build + 'fonts'))
+      );
   });
 
 };

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(gulp, $, config) {
+module.exports = function(gulp, $, config, argv) {
 
   var pngquant = require('imagemin-pngquant');
 
@@ -14,21 +14,27 @@ module.exports = function(gulp, $, config) {
         use: [pngquant()]
       }))
       .pipe($.size({title: 'IMAGES'}))
-      .pipe(gulp.dest(config.build + 'img'));
+      .pipe($.if(argv.integration,
+        gulp.dest(config.integration + 'Images/Placeholder'),
+        gulp.dest(config.build + 'img'))
+      );
   });
 
   /**
    * Copy svg
    */
-   gulp.task('svg-optim', function() {
-     return gulp.src(config.svg)
-       .pipe($.imagemin({
+  gulp.task('svg-optim', function() {
+    return gulp.src(config.svg)
+      .pipe($.imagemin({
         svgoPlugins: [{
           cleanupIDs: false // we usually need them
         }]
        }))
-       .pipe($.size({title: 'SVG'}))
-       .pipe(gulp.dest(config.build + 'svg'));
+      .pipe($.size({title: 'SVG'}))
+      .pipe($.if(argv.integration,
+        gulp.dest(config.integration + 'Images/Svg'),
+        gulp.dest(config.build + 'svg'))
+      );
    });
 
    gulp.task('img', ['img-optim', 'svg-optim']);

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(gulp, $, config) {
+module.exports = function(gulp, $, config, argv) {
 
   /**
    * Build JS
@@ -16,7 +16,11 @@ module.exports = function(gulp, $, config) {
       .pipe($.rename({ suffix: '.min' }))
       .pipe($.uglify())
       .pipe($.size({title: 'JS SCRIPTS', showFiles: true}))
-      .pipe(gulp.dest(config.build + 'js'));
+       // use --integration to deploy assets in Public directory
+      .pipe($.if(argv.integration,
+        gulp.dest(config.integration + '/JavaScript'),
+        gulp.dest(config.build + 'js'))
+      );
   });
 
 };

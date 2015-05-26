@@ -13,11 +13,11 @@ var gulp          = require('gulp'),
     slug          = require('slug');
 
 
-require(config.tasks + 'vendors')(gulp, $, config);                            // $ gulp vendors
-require(config.tasks + 'images')(gulp, $, config);                             // $ gulp img
+require(config.tasks + 'vendors')(gulp, $, config, argv);                      // $ gulp vendors
+require(config.tasks + 'images')(gulp, $, config, argv);                       // $ gulp img
 require(config.tasks + 'styles')(gulp, $, config, argv, slug);                 // $ gulp styles
-require(config.tasks + 'scripts')(gulp, $, config);                            // $ gulp scripts
-require(config.tasks + 'icons')(gulp, $, config, slug);                        // $ gulp icons
+require(config.tasks + 'scripts')(gulp, $, config, argv);                      // $ gulp scripts
+require(config.tasks + 'icons')(gulp, $, config, argv, slug);                  // $ gulp icons
 require(config.tasks + 'clean')(gulp, $, config, del);                         // $ gulp clean
 require(config.tasks + 'styleguide')(gulp, $, config, assemble);               // $ gulp styleguide
 require(config.tasks + 'server')(gulp, $, config, browserSync, runSequence);   // $ gulp serve
