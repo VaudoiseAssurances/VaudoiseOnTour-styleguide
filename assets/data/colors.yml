@@ -1,13 +1,17 @@
 green:
-  green-haze: '#00a059'
+  shadow-green: '#9dc9b4'
+  green-haze: '#1EC64B'
   mountain-meadow: '#14a355'
   salem: '#0d7b41'
   jewel: '#0d5a41'
+red:
+  alizarin-crimson: '#ec2435'
 gray:
   white: '#fff'
   alabaster: '#f8f8f8'
   wild-sand: '#f4f4f4'
   mercury: '#e8e8e8'
+  silver-chalice: '#a8a8a8'
   gray: '#888888'
   mine-shaft: '#333333'
   black: '#000'
