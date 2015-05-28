@@ -376,5 +376,8 @@ body {
 html {
   font-size: 16px !important; }
 
+h5 {
+  text-transform: none !important; }
+
 .f-item-notes {
   margin-bottom: 30px; }
