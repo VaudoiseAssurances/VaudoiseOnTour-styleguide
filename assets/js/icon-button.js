@@ -24,9 +24,8 @@
         var $that = $(this),
             halfDisc = $(this).find('.icon-button').width() / 2;
 
-        $that.find('.button-label').animate({opacity: 0}, 150, function(){
-          $that.find('.button-label-wrapper').animate({width: halfDisc}, 300);
-        });
+        $that.find('.button-label').animate({opacity: 0}, 150);
+        $that.find('.button-label-wrapper').animate({width: halfDisc}, 400);
       });
     });
   }
