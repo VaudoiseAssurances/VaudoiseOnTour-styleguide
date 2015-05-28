@@ -42,10 +42,10 @@
       width: 32.5px;
       height: 65px;
       top: -1px;
-      .button-label {
-        position: relative;
-        top: -5px;
-      }
+    }
+    &.icon-button-lg .button-label {
+      position: relative;
+      top: -4px;
     }
     &.icon-button-sm:after {
       width: 22.5px;
