@@ -7,7 +7,7 @@
   background: none;
   box-sizing: border-box;
   text-align: center;
-  line-height: 57px;
+  line-height: 59px;
   border: none;
   border-radius: 100px;
   text-transform: uppercase;
@@ -42,10 +42,10 @@
       width: 32.5px;
       height: 65px;
       top: -1px;
-      .button-label {
-        position: relative;
-        top: -5px;
-      }
+    }
+    &.icon-button-lg .button-label {
+      position: relative;
+      top: -4px;
     }
     &.icon-button-sm:after {
       width: 22.5px;

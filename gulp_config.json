@@ -15,6 +15,7 @@
       "bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js",
       "bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js",
       "bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js",
+      "bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js",
       "bower_components/jquery-focuspoint/js/jquery.focuspoint.js",
       "bower_components/photoswipe/dist/photoswipe.js",
       "bower_components/photoswipe/dist/photoswipe-ui-default.js"
