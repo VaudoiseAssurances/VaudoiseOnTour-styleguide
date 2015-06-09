@@ -3,8 +3,11 @@ notes: |
   ##### Usage : `{{> thumbnail-cover }}`
   ##### Options :
   - **partner-logo** - String
+  - **partner-url** - String
 ---
 
 <div class="partner">
-  <img src="{{#if partner-logo}}{{partner-logo}}{{^}}https://unsplash.it/104/104/?random{{/if}}" class="img-responsive">
+  <a href="{{#if partner-url}}{{partner-url}}{{^}}#{{/if}}">
+    <img src="{{#if partner-logo}}{{partner-logo}}{{^}}https://unsplash.it/104/104/?random{{/if}}" class="img-responsive">
+  </a>
 </div>
