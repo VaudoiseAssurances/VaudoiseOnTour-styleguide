@@ -4,4 +4,7 @@
     color: $gray;
     text-decoration: underline;
   }
+  li + li:before {
+    content: "\0203A";
+  }
 }
