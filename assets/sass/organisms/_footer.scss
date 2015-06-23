@@ -1,6 +1,19 @@
 footer.meadowy {
   font-size: 14px;
   color: $shadow-green;
+  .voticons {
+    color: $white;
+    &:before {
+      font-size: 3.5em;
+      position: relative;
+      top: 15px;
+      line-height: 1px !important;
+    }
+  }
+  .col-sm-4 {
+    padding: 8px;
+    &:first-child {padding-top: 0;}
+  }
   @media only screen and (max-width: $screen-xs-max) {
     .text-right,
     .text-center {
