@@ -292,15 +292,24 @@
 }(jQuery));
 'use strict';
 
-(function($){
-  $(document).ready(function(){
-    $('.btn[href*="#"]').click(function(e){
+(function($) {
+  $(document).ready(function() {
+    var $scrollToTargetOnLoad = $('#offsetOnLoad'),
+    scrollTo = function($target, delay) {
+      $('html, body').animate({
+        scrollTop : $($target).offset().top - 30
+      }, delay);
+    };
+
+    $('.btn[href*="#"]').click(function(e) {
       e.preventDefault();
       var $target = $(this).attr('href');
-      $('html, body').animate({
-          scrollTop: $($target).offset().top -30
-      }, 1000);
+      scrollTo($target, 1000);
     });
+
+    if ($scrollToTargetOnLoad.length) {
+      scrollTo($scrollToTargetOnLoad, 1200);
+    }
   });
 }(jQuery));
 'use strict';
