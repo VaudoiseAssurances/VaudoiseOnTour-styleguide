@@ -5,14 +5,15 @@ footer.meadowy {
     color: $white;
     &:before {
       font-size: 3.5em;
-      position: relative;
-      top: 15px;
-      line-height: 1px !important;
     }
   }
   .col-sm-4 {
     padding: 8px;
-    &:first-child {padding-top: 0;}
+    &:first-child {
+      display: flex;
+      align-items: center;
+      max-height: 39px;
+    }
   }
   @media only screen and (max-width: $screen-xs-max) {
     .text-right,
