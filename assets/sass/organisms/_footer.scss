@@ -3,15 +3,18 @@ footer.meadowy {
   color: $shadow-green;
   .voticons {
     color: $white;
+    display: inline-block;
+    margin-top: -33px;
     &:before {
       font-size: 3.5em;
+      display: inline-block;
+      position: relative;
+      top: 16px;
     }
   }
   .col-sm-4 {
     padding: 8px;
     &:first-child {
-      display: flex;
-      align-items: center;
       max-height: 39px;
     }
   }
