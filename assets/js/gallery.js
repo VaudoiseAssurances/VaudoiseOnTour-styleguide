@@ -173,6 +173,17 @@
               }
               captionEl.children[0].innerHTML = item.title + '<br/><small>Photo: ' + item.author + '</small>';
               return true;
+            },
+
+            getPageURLForShare: function() {
+              var item = items[this.index ],
+                pageUrl = window.location.href;
+
+              if (item === undefined) {
+                return pageUrl;
+              }
+
+              return item.el.getAttribute('data-sharing-url') || pageUrl;
             }
           };
 
