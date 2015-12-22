@@ -2,40 +2,38 @@
 
 (function() {
 
-    var initPhotoSwipeFromDOM = function(gallerySelector) {
+    var initPhotoSwipeFromDOM = function(gallerySelector, galleryElementSelector) {
 
-      var parseThumbnailElements = function(el) {
-          var thumbElements = el.childNodes,
+      var galleryElSelector = galleryElementSelector,
+          parseThumbnailElements = function(el) {
+          var thumbElements = el.querySelectorAll(galleryElSelector),
               numNodes = thumbElements.length,
               items = [],
-              el,
+              element,
               childElements,
-              thumbnailEl,
               size,
               item;
 
           for(var i = 0; i < numNodes; i++) {
-              el = thumbElements[i];
-
+              element = thumbElements[i];
               // include only element nodes
-              if(el.nodeType !== 1) {
+              if(element.nodeType !== 1 && !element.getAttribute('data-size')) {
                 continue;
               }
 
-              childElements = el.children;
-
-              size = el.getAttribute('data-size').split('x');
+              size = element.getAttribute('data-size').split('x');
 
               // create slide object
               item = {
-            src: el.getAttribute('href'),
-            w: parseInt(size[0], 10),
-            h: parseInt(size[1], 10),
-            author: el.getAttribute('data-author')
+                src: element.getAttribute('href'),
+                w: parseInt(size[0], 10),
+                h: parseInt(size[1], 10),
+                author: element.getAttribute('data-author')
               };
 
-              item.el = el; // save link to element for getThumbBoundsFn
+              item.el = element; // save link to element for getThumbBoundsFn
 
+              childElements = element.children;
               if(childElements.length > 0) {
                 item.msrc = childElements[0].getAttribute('src'); // thumbnail url
                 if(childElements.length > 1) {
@@ -44,9 +42,9 @@
               }
 
 
-          var mediumSrc = el.getAttribute('data-med');
+          var mediumSrc = element.getAttribute('data-med');
                 if(mediumSrc) {
-                  size = el.getAttribute('data-med-size').split('x');
+                  size = element.getAttribute('data-med-size').split('x');
                   // "medium-sized" image
                   item.m = {
                       src: mediumSrc,
@@ -73,10 +71,12 @@
       };
 
       var onThumbnailsClick = function(e) {
-          e = e || window.event;
-          e.preventDefault ? e.preventDefault() : e.returnValue = false;
+          var event = e || window.event;
+          event.returnValue = false;
 
-          var eTarget = e.target || e.srcElement;
+          if ( typeof event.preventDefault !== 'undefined') { event.preventDefault(); }
+
+          var eTarget = event.target || event.srcElement;
 
           var clickedListItem = closest(eTarget, function(el) {
               return el.tagName === 'A';
@@ -163,7 +163,7 @@
                   return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
               },
 
-              addCaptionHTMLFn: function(item, captionEl, isFake) {
+              addCaptionHTMLFn: function(item, captionEl) {
             if(!item.title) {
               captionEl.children[0].innerText = '';
               return false;
@@ -179,6 +179,7 @@
           }
 
           // Pass data to PhotoSwipe and initialize it
+          /* global PhotoSwipe, PhotoSwipeUI_Default */
           gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
 
           // see: http://photoswipe.com/documentation/responsive-images.html
@@ -248,6 +249,6 @@
       }
     };
 
-    initPhotoSwipeFromDOM('.gallery');
+    initPhotoSwipeFromDOM('.gallery', '.demo-gallery__img--main');
 
   })();
