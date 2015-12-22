@@ -131,9 +131,7 @@
               params[pair[0]] = pair[1];
           }
 
-          if(params.gid) {
-            params.gid = parseInt(params.gid, 10);
-          }
+          params.gid = parseInt(params.gid, 10) || 1;
 
           if(!params.hasOwnProperty('pid')) {
               return params;
