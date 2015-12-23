@@ -176,7 +176,7 @@
             },
 
             getPageURLForShare: function() {
-              var item = items[this.index ],
+              var item = items[gallery.getCurrentIndex()],
                 pageUrl = window.location.href;
 
               if (item === undefined) {
@@ -194,8 +194,8 @@
         // Pass data to PhotoSwipe and initialize it
         /* global PhotoSwipe, PhotoSwipeUI_Default */
         gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-        gallery.listen('beforeResize', function () {
 
+        gallery.listen('beforeResize', function () {
           var dpiRatio = window.devicePixelRatio ? window.devicePixelRatio : 1;
           dpiRatio = Math.min(dpiRatio, 2.5);
           realViewportWidth = gallery.viewportSize.x * dpiRatio;
@@ -205,7 +205,6 @@
               useLargeImages = true;
               imageSrcWillChange = true;
             }
-
           } else {
             if (useLargeImages) {
               useLargeImages = false;
