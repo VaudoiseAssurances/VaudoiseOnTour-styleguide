@@ -1,6 +1,6 @@
 # VaudoiseOnTour
 
-You can view all the UI components in the [styleguide](http://vaudoise.github.io/styleguide) !
+You can view all the UI components in the [styleguide](http://vaudoiseassurances.github.io/VaudoiseOnTour-styleguide/) !
 
 ## Installation
 
