@@ -37,6 +37,14 @@ module.exports = function(gulp, $, config, argv) {
       );
    });
 
-   gulp.task('img', ['img-optim', 'svg-optim']);
+  /**
+   * Copy favicons in styleguide folder
+   */
+  gulp.task('favicons', function() {
+    return gulp.src(config.assets + 'favicons/*')
+      .pipe(gulp.dest(config.styleguide.dest))
+  });
+
+   gulp.task('img', ['img-optim', 'svg-optim', 'favicons']);
 
 };

@@ -3,16 +3,20 @@ footer.meadowy {
   color: $shadow-green;
   .voticons {
     color: $white;
+    display: inline-block;
+    margin-top: -33px;
     &:before {
       font-size: 3.5em;
+      display: inline-block;
       position: relative;
-      top: 15px;
-      line-height: 1px !important;
+      top: 16px;
     }
   }
   .col-sm-4 {
     padding: 8px;
-    &:first-child {padding-top: 0;}
+    &:first-child {
+      max-height: 39px;
+    }
   }
   @media only screen and (max-width: $screen-xs-max) {
     .text-right,
