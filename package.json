@@ -34,7 +34,7 @@
     "helper-markdown": "^0.1.1",
     "imagemin-pngquant": "^4.1.0",
     "jshint-stylish": "^1.0.2",
-    "lodash": "^3.8.0",
+    "lodash": "^4.17.19",
     "run-sequence": "~1.1.0",
     "slug": "^0.9.1",
     "yargs": "^3.8.0"
